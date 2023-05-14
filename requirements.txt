@@ -1,0 +1,10 @@
+numpy
+pandas
+requests
+tqdm
+fastai==1.0.57
+sentencepiece
+torch==1.8.0
+torchtext==0.9.0
+dill
+googletrans
