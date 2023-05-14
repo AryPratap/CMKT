@@ -158,7 +158,7 @@ def list_dataset_keys():
   f.close()
   return list(data['datasets'][0].keys())
 
-def list_cmtt_datasets(search_key="all", search_term = "", isPrint=False):
+def list_cmtt_datasets(search_key="all", search_term = "", isPrint=False, details = False):
   """
     Returns the list the datasets provided by the cmtt library.
     :param search_key: dataset property in which the search_term is to searched. 
@@ -202,6 +202,9 @@ def list_cmtt_datasets(search_key="all", search_term = "", isPrint=False):
 
   # f.close()
   # return lst
+  dataset_keys = list_dataset_keys()
+ 
+
 
   datasets = data['datasets']
   dataset_list = []
@@ -211,23 +214,41 @@ def list_cmtt_datasets(search_key="all", search_term = "", isPrint=False):
         values = [x.lower() for x in i.values()]
         for val in values:
           if search_term.lower() in val:
-            dataset_list.append(i)
-            break
+            if details:
+              dataset_list.append(i)
+              break
+            else:
+              dataset_list.append(i["name"])
+              break
+
       else:
-        dataset_list.append(i)
+        if details:
+          dataset_list.append(i)
+        else:
+          dataset_list.append(i["name"])
+          
   else:
-    dataset_keys = list_dataset_keys()
+    
     if search_key in dataset_keys:
       for i in datasets:
         if(search_term != ""):
           if search_term.lower() in i[search_key].lower():
-            dataset_list.append(i)
+            if details:
+              dataset_list.append(i)
+            else:
+              dataset_list.append(i["name"])
+
         else:
-          dataset_list.append(i)
+          if details:
+            dataset_list.append(i)
+          else:
+            dataset_list.append(i["name"])
     else:
       raise KeyError("Invalid key.")
 
   f.close()
+
+
   if isPrint:
     for i in dataset_list:
       print(json.dumps(i, sort_keys=True, indent=4))

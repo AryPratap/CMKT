@@ -20,7 +20,7 @@ print()
 
 # List CMTT datasets for the task of LID
 print("List CMTT Datasets Function (search_key = task, search_term = ner): ")
-data = list_cmtt_datasets(search_key="task", search_term = "ner", isPrint=True)
+data = list_cmtt_datasets(search_key="task", search_term = "ner", isPrint=True, details=True)
 
 # List CMTT datasets for hineng language
 print("List CMTT Datasets Function (search_key = language, search_term = hineng): ")
