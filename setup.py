@@ -38,7 +38,7 @@ setup(
   # packages=["cmtt", "cmtt/data", "cmtt/preprocessing"],
   packages=find_packages(),
   include_package_data=True,
-  data_files=[('cmtt/data', ['cmtt/data/data.json']), ('cmtt/preprocessing/tokenizer', ['cmtt/preprocessing/tokenizer/vocab.txt', 'cmtt/preprocessing/tokenizer/vocab_2.txt']), ('cmtt/tasks', ['cmtt/tasks/tasks.json']), ('cmtt/tasks/LID', ['cmtt/tasks/LID/model_info.json']), ('cmtt/tasks/NER', ['cmtt/tasks/NER/model_info.json']), ('cmtt/tasks/POS', ['cmtt/tasks/POS/model_info.json'])],
+  data_files=[('cmtt/data', ['cmtt/data/data.json']), ('cmtt/preprocessing/tokenizer', ['cmtt/preprocessing/tokenizer/vocab.txt', 'cmtt/preprocessing/tokenizer/vocab_2.txt','cmtt/preprocessing/tokenizer/english.pickle']), ('cmtt/tasks', ['cmtt/tasks/tasks.json']), ('cmtt/tasks/LID', ['cmtt/tasks/LID/model_info.json']), ('cmtt/tasks/NER', ['cmtt/tasks/NER/model_info.json']), ('cmtt/tasks/POS', ['cmtt/tasks/POS/model_info.json'])],
   install_requires=[
     "numpy", 
     "pandas", 
