@@ -1,1 +1,0 @@
-from cmtt.metrics import utteranceCMI

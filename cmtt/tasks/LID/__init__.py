@@ -1,1 +1,1 @@
-from cmtt.tasks.LID.BiLSTM_LID import *
+from cmtt.tasks.LID.BiLSTM_HINENG_LID import *

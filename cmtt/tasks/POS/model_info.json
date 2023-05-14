@@ -1,0 +1,13 @@
+{
+    "model":[
+        {
+            "Model name": "BiLSTM",
+            "task": "POS",
+            "Invoke By": "BiLSTM_HINENG_POS",
+            "dataset": "Lince hindi-english POS dataset in roman script",
+            "Test Accuracy": "76.52%",
+            "Train/Val/Test Examples": "831/238/119",
+            "language": "hineng"
+        }            
+    ]
+}

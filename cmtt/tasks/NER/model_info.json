@@ -1,0 +1,13 @@
+{
+    "model":[
+        {
+            "Model name": "BiLSTM",
+            "task": "NER",
+            "Invoke By": "BiLSTM_HINENG_NER",
+            "dataset": "Lince hindi-english NER dataset in roman script",
+            "Test Accuracy": "93.67%",
+            "Train/Val/Test Examples": "1088/311/156",
+            "language": "hineng"
+        }       
+    ]
+}

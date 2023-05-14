@@ -2,7 +2,7 @@ from fastai.text import *
 from googletrans import Translator
 import re
 from cmtt.preprocessing.stemmer.stemmer import *
-from cmtt.tasks import *
+from cmtt.tasks import HinglishToolKit
 
 words_dict  = { "तैराक":"तैर",
                 "चालाक":"चाल",
@@ -84,7 +84,9 @@ def hindi_stem(text):
 def hien_stemmer(text):
   results = []
   
-  lid = BiLSTM_LID()
+  hientoolkit = HinglishToolKit()
+  
+  lid = hientoolkit.BiLSTM_HINENG_LID()
   translator = Translator()
   en_stemmer = PorterStemmer()
 

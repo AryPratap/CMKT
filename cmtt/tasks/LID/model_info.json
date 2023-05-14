@@ -1,0 +1,13 @@
+{
+    "model":[
+        {
+            "Model name": "BiLSTM",
+            "task": "LID",
+            "Invoke By": "BiLSTM_HINENG_LID",
+            "dataset": "L3Cube hindi-english dataset in roman script",
+            "Test Accuracy": "97.98%",
+            "Train/Val/Test Examples": "31116/8890/4446",
+            "language": "hineng"
+        }
+    ]
+}

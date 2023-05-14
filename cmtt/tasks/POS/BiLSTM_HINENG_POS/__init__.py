@@ -60,7 +60,7 @@ class BiLSTM_MODEL(nn.Module):
         return predictions
 
 
-class BiLSTM_POS():
+class BiLSTM_HINENG_POS():
 
     def __init__(self):
 
