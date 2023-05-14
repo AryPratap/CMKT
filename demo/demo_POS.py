@@ -1,7 +1,11 @@
-from cmtt.tasks import *
+from cmtt.tasks import HinglishToolKit
+
 
 sentence = 'tu kesa hai mere bhai, kyuki I am fine. Empowerment toh people'
-pos = BiLSTM_POS()
+
+mytoolkit = HinglishToolKit()
+
+pos = mytoolkit.BiLSTM_HINENG_POS()
 
 lst = pos.getPOSTags(sentence)
 print(lst)

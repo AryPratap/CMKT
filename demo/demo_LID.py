@@ -1,6 +1,8 @@
-from cmtt.tasks import *
+from cmtt.tasks import HinglishToolKit
 
-lid = BiLSTM_LID()
+mytoolkit = HinglishToolKit()
+
+lid = mytoolkit.BiLSTM_HINENG_LID()
 sentence = 'tu kesa hai mere bhai, kyuki I am fine. Empowerment toh people choddega nhi, right?'
 lst = lid.getLangTags(sentence)
 print(lst)
