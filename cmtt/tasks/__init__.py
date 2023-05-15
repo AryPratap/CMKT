@@ -104,6 +104,7 @@ class HinglishToolKit(LanguageToolKit):
     BiLSTM_HINENG_LID = BiLSTM_HINENG_LID
     BiLSTM_HINENG_NER = BiLSTM_HINENG_NER
     BiLSTM_HINENG_POS = BiLSTM_HINENG_POS
+    XLM_HIEN_LID = XLM_HIEN_LID
     
     def __init__(self):
         super().__init__('hineng')

@@ -411,6 +411,7 @@ class RomanTokenizer():
         file_path = os.path.join(path, "english.pickle")
         with open(file_path,"rb") as file:
             data = pickle.load(file)
+            
 
         return data.tokenize(text)
     
