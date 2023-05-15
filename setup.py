@@ -51,5 +51,6 @@ setup(
     "torchtext==0.9.0",
     "googletrans",
     "tabulate==0.9.0"
+    "transformers==4.29.1"
   ]
 )
