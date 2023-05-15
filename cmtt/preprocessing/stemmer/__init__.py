@@ -86,7 +86,7 @@ def hien_stemmer(text):
   
   hientoolkit = HinglishToolKit()
   
-  lid = hientoolkit.BiLSTM_HINENG_LID()
+  lid = hientoolkit.XLM_HIEN_LID()
   translator = Translator()
   en_stemmer = PorterStemmer()
 
@@ -95,7 +95,7 @@ def hien_stemmer(text):
   for i in tokens_tags_list:
     if(i[1] == 'EN'):
       results.append(en_stemmer.stem(i[0]))
-    else:
+    elif(i[1] == "HI"):
       hi_token = translator.translate(i[0], src = 'hi', dest = 'hi').text
       if (bool(re.match(r"^[A-Za-z]", hi_token))):
         hi_token = translator.translate(i[0], src = 'hi', dest = 'hi')
