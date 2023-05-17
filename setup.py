@@ -46,11 +46,12 @@ setup(
     "tqdm",
     'fastai==1.0.57',
     "sentencepiece",
-    "torch==1.8.0",
+    "torch==2.0.1",
     "dill",
-    "torchtext==0.9.0",
+    "torchtext==0.15.2",
     "googletrans",
     "tabulate==0.9.0"
-    "transformers==4.29.1"
+    "transformers==4.29.1",
+    "nltk"
   ]
 )
