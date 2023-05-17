@@ -1,7 +1,9 @@
 from cmtt.tasks import *
 from cmtt.metrics import *
 
-lid = BiLSTM_LID()
+mytoolkit = HinglishToolKit()
+
+lid = mytoolkit.XLM_HIEN_LID()
 sentence = 'mei insaan hu'
 lst = lid.getLangTags(sentence)
 print(lst)

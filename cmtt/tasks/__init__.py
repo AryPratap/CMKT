@@ -100,10 +100,6 @@ class LanguageToolKit:
     
 class HinglishToolKit(LanguageToolKit):
     '''Toolkit for Hindi English mixed text'''
-
-    BiLSTM_HINENG_LID = BiLSTM_HINENG_LID
-    BiLSTM_HINENG_NER = BiLSTM_HINENG_NER
-    BiLSTM_HINENG_POS = BiLSTM_HINENG_POS
     XLM_HIEN_LID = XLM_HIEN_LID
     XLM_HIEN_NER = XLM_HIEN_NER
     XLM_HIEN_POS = XLM_HIEN_POS

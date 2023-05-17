@@ -1,7 +1,7 @@
 {
     "model":[
         {
-            "Model name": "BiLSTM",
+            "Model name": "XLM",
             "task": "LID",
             "Invoke By": "BiLSTM_HINENG_LID",
             "dataset": "L3Cube hindi-english dataset in roman script",

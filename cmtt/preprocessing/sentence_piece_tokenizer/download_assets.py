@@ -35,7 +35,7 @@ def setup_language(language_code: str):
     lmconfig = LMConfigs(language_code)
     config = lmconfig.get_config()
 
-    dest = path/'model'/f'{language_code}'
+    dest = path/'models'/f'{language_code}'
     fname = config["tokenizer_model_file_name"]
     
     if (dest/f'{fname}').exists(): 
