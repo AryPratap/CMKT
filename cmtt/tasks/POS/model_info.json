@@ -1,11 +1,11 @@
 {
     "model":[
         {
-            "Model name": "BiLSTM",
+            "Model name": "XLM Roberta base",
             "task": "POS",
-            "Invoke By": "BiLSTM_HINENG_POS",
+            "Invoke By": "XLM_HIEN_POS",
             "dataset": "Lince hindi-english POS dataset in roman script",
-            "Test Accuracy": "76.52%",
+            "Test Accuracy": "96.95%",
             "Train/Val/Test Examples": "831/238/119",
             "language": "hineng"
         }            

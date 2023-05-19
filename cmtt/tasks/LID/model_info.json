@@ -1,12 +1,12 @@
 {
     "model":[
         {
-            "Model name": "XLM",
+            "Model name": "XLM Roberta base",
             "task": "LID",
-            "Invoke By": "BiLSTM_HINENG_LID",
-            "dataset": "L3Cube hindi-english dataset in roman script",
-            "Test Accuracy": "97.98%",
-            "Train/Val/Test Examples": "31116/8890/4446",
+            "Invoke By": "XLM_HIEN_LID",
+            "dataset": "Lince hindi-english dataset in roman script",
+            "Test Accuracy": "97.34",
+            "Train/Val/Test Examples": "4823/1854/744",
             "language": "hineng"
         }
     ]

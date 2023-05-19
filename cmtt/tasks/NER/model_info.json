@@ -1,11 +1,11 @@
 {
     "model":[
         {
-            "Model name": "BiLSTM",
+            "Model name": "XLM Roberta base",
             "task": "NER",
-            "Invoke By": "BiLSTM_HINENG_NER",
+            "Invoke By": "XLM_HIEN_NER",
             "dataset": "Lince hindi-english NER dataset in roman script",
-            "Test Accuracy": "93.67%",
+            "Test Accuracy": "96.58%",
             "Train/Val/Test Examples": "1088/311/156",
             "language": "hineng"
         }       
