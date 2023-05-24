@@ -6,6 +6,7 @@ print()
 print("Load url function")
 result_json = load_url('https://world.openfoodfacts.org/api/v0/product/5060292302201.json')
 print(result_json['code'])
+print()
 
 result_csv = load_url('https://gist.githubusercontent.com/rnirmal/e01acfdaf54a6f9b24e91ba4cae63518/raw/6b589a5c5a851711e20c5eb28f9d54742d1fe2dc/datasets.csv')
 print(result_csv['about'][20])
