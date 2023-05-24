@@ -94,10 +94,8 @@ def I_index(sentence):
 	for i in range(len(langTags)-1):
 		if langTags[i]!=langTags[i+1]:
 			S = S+1
-		else:
-			s = S + 0
-	#return S/(len(langTags)-1)
-	return langTags
+	return S/(len(langTags)-1)
+
 
 def burstiness(sentence):
 	mytoolkit = HinglishToolKit()

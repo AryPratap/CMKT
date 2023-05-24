@@ -175,7 +175,7 @@ def list_cmtt_datasets(search_key="all", search_term = "", isPrint=False, detail
   f = open(os.path.join(path, "data.json"))
   data = json.load(f)
   if isPrint:
-    print("Total available datasets: " + str(len(data['datasets'])))
+    #print("Total available datasets: " + str(len(data['datasets'])))
     print("Following are the datasets based on the search parameters: ")
 
   # if(key=="name" or key=="all"):
