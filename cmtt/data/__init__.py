@@ -2,7 +2,7 @@
 """
 Functions to load local and online resource files, list and download CMTT datasets.
 """
-
+import collections
 import pickle
 import json
 import pandas as pd
@@ -145,7 +145,7 @@ def load_local(
   return resource_val
 
 
-def list_dataset_keys():
+def ListDatasetKeys():
   """
     Returns the list of key prperties of the datasets provided by the cmtt library
     :return: list of keys
@@ -158,7 +158,7 @@ def list_dataset_keys():
   f.close()
   return list(data['datasets'][0].keys())
 
-def list_cmtt_datasets(search_key="all", search_term = "", isPrint=False, details = False):
+def ListDatasets(search_key="all", search_term = "", isPrint=False, details = False):
   """
     Returns the list the datasets provided by the cmtt library.
     :param search_key: dataset property in which the search_term is to searched. 
@@ -175,37 +175,11 @@ def list_cmtt_datasets(search_key="all", search_term = "", isPrint=False, detail
   f = open(os.path.join(path, "data.json"))
   data = json.load(f)
   if isPrint:
-    #print("Total available datasets: " + str(len(data['datasets'])))
+    print("Total available datasets: " + str(len(data['datasets'])))
     print("Following are the datasets based on the search parameters: ")
 
-  # if(key=="name" or key=="all"):
-  #   lst = []
-  # else:
-  #   lst = {}
-
-  # if(key=="all"):
-  #   for i in data['datasets']:
-  #     lst.append(i)
-  #     if isPrint:
-  #       print(i)
-  # elif(key in data['datasets'][0].keys()):
-  #   for i in data['datasets']:
-  #     if(key != 'name'):
-  #       lst[i['name']] = i[key]
-  #     else:
-  #       lst.append(i[key])
-  #   if isPrint:
-  #     print("Key: " + key + "\n" + str(lst))
-  # else:
-  #   print("The key " + key + " is not a valid key")
-  #   print("Valid keys: " + str(data.keys()))
-
-  # f.close()
-  # return lst
-  dataset_keys = list_dataset_keys()
+  dataset_keys = ListDatasetKeys()
  
-
-
   datasets = data['datasets']
   dataset_list = []
   if(search_key == "all"):
@@ -250,7 +224,14 @@ def list_cmtt_datasets(search_key="all", search_term = "", isPrint=False, detail
 
 
   if isPrint:
-    for i in dataset_list:
-      print(json.dumps(i, sort_keys=True, indent=4))
-      print()
+    if not dataset_list:
+      print("No datasets found based on the search parameters.")
+    else:
+      if isinstance(dataset_list[0], dict):
+        for i in dataset_list:
+          ordered_dict = collections.OrderedDict(i)
+          print(json.dumps(ordered_dict, sort_keys=False, indent=4))
+          print()
+      else:
+        print(dataset_list)
   return dataset_list

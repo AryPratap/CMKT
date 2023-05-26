@@ -15,17 +15,17 @@ print()
 
 # List CMTT dataset keys and all available cmtt datasets
 print("List dataset keys and cmtt datasets function")
-keys = list_dataset_keys()
+keys = ListDatasetKeys()
 print(keys)
 print()
 
 # List CMTT datasets for the task of LID
 print("List CMTT Datasets Function (search_key = task, search_term = ner): ")
-data = list_cmtt_datasets(search_key="task", search_term = "ner", isPrint=True,details=True)
+data = ListDatasets(search_key="task", search_term = "ner", isPrint=True,details=True)
 
 # List CMTT datasets for hineng language
 print("List CMTT Datasets Function (search_key = language, search_term = hineng): ")
-data = list_cmtt_datasets(search_key="language", search_term = "hineng", isPrint=True)
+data = ListDatasets(search_key="language", search_term = "hineng", isPrint=True)
 
 # Download cmtt datasets
 print("Download cmtt datasets function")

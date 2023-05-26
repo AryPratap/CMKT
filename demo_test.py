@@ -1,7 +1,8 @@
-from cmtt.tasks import HinglishToolKit
+from cmtt.tasks import *
 from cmtt.preprocessing import hien_stemmer
 from cmtt.metrics import M_Index
 from cmtt.metrics import I_index, burstiness
+from cmtt.data import *
 
 mytoolkit = HinglishToolKit()
 
@@ -25,8 +26,7 @@ sentence = "RAHUL jab dieting par hota hai toh green tea peeta hai."
 
 #ner = mytoolkit.XLM_HIEN_NER()
 #print(ner.getNERTags(sentence))
-print(burstiness(sentence))
-
+#print(burstiness(sentence))
 
 
 
@@ -34,4 +34,13 @@ print(burstiness(sentence))
 
 #pos = mytoolkit.XLM_HIEN_POS()
 #print(pos.getPOSTags("Aap kaise hai main thik. I am good. My name is Ramesh"))
+
+# List CMTT datasets for the task of LID
+print("List CMTT Datasets Function (search_key = task, search_term = ner): ")
+data = ListDatasets(search_key="task", search_term = "ner", isPrint=True,details=True)
+print()
+# List CMTT datasets for hineng language
+print("List CMTT Datasets Function (search_key = language, search_term = hineng): ")
+data1 = ListDatasets(search_key="language", search_term = "hineng", isPrint=True, details=True)
+
 
