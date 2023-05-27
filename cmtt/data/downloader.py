@@ -146,7 +146,7 @@ def download_cmtt_datasets(name_list):
     return
 
   path = os.path.dirname(os.path.realpath(__file__))
-  f = open(os.path.join(path, "data.json"))
+  f = open(os.path.join(path, "meta_data.json"))
   data = json.load(f)
 
   flag = 0

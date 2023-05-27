@@ -84,7 +84,7 @@ def hindi_stem(text):
 def hien_stemmer(text):
   results = []
   
-  hientoolkit = TaskToolKit()
+  hientoolkit = TaskToolKit("hineng")
   
   lid = hientoolkit.lid(model_name="XLM Roberta base")
   translator = Translator()

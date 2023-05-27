@@ -1,10 +1,10 @@
-from cmtt.tasks import HinglishToolKit, SpanishEnglishToolKit
+from cmtt.tasks import TaskToolKit
 print("\nCMTT tasks  toolkit Demo")
 print()
 
 # Initialize hinglish and SpanishEnglish toolkits
-hien_toolkit = HinglishToolKit()
-spen_toolkit = SpanishEnglishToolKit()
+hien_toolkit = TaskToolKit("hineng")
+
 
 # Search tasks available based on task type
 task_list_hi = hien_toolkit.list_tasks(task_type="syntactic")
