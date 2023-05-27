@@ -9,7 +9,6 @@ path = Path(__file__).parent
 model_name = "AryPratap/XLM-roberta-HIEN-POS"
 
 class XLM_HIEN_POS():
-    @classmethod
 
     def __init__(self):
 

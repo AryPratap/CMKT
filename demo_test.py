@@ -4,7 +4,7 @@ from cmtt.metrics import M_Index
 from cmtt.metrics import I_index, burstiness
 from cmtt.data import *
 
-mytoolkit = HinglishToolKit()
+#mytoolkit = HinglishToolKit()
 
 '''
 code_mixed_text = 'tu kesa hai mere bhai, kyuki I am fine. Empowerment toh people chaddange nhi, right?'
@@ -36,11 +36,15 @@ sentence = "RAHUL jab dieting par hota hai toh green tea peeta hai."
 #print(pos.getPOSTags("Aap kaise hai main thik. I am good. My name is Ramesh"))
 
 # List CMTT datasets for the task of LID
-print("List CMTT Datasets Function (search_key = task, search_term = ner): ")
-data = ListDatasets(search_key="task", search_term = "ner", isPrint=True,details=True)
-print()
-# List CMTT datasets for hineng language
-print("List CMTT Datasets Function (search_key = language, search_term = hineng): ")
-data1 = ListDatasets(search_key="language", search_term = "hineng", isPrint=True, details=True)
+# print("List CMTT Datasets Function (search_key = task, search_term = ner): ")
+# data = ListDatasets(search_key="task", search_term = "ner", isPrint=True,details=True)
+# print()
+# # List CMTT datasets for hineng language
+# print("List CMTT Datasets Function (search_key = language, search_term = hineng): ")
+# data1 = ListDatasets(search_key="language", search_term = "hineng", isPrint=True, details=True)
+mytoolkit = TaskToolKit(lang="hineng")
+lid = mytoolkit.lid(model_name="XLM ")
+
+print(lid.getLangTags(sentence))
 
 

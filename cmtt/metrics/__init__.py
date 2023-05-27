@@ -1,5 +1,7 @@
-from cmtt.tasks import HinglishToolKit
+from cmtt.tasks import TaskToolKit
 import numpy as np
+
+
 
 def cmi(sentence):
 	"""
@@ -9,11 +11,11 @@ def cmi(sentence):
     output:
     CMI: Code mixing Index of given sentence
     """
-	mytoolkit = HinglishToolKit()
-	lid = mytoolkit.XLM_HIEN_LID()
+	mytoolkit = TaskToolKit("hineng")
+	lid = mytoolkit.lid(model_name="XLM Roberta base")
 
 	langTags = lid.getlangIds(sentence)
-	ner = mytoolkit.XLM_HIEN_NER()
+	ner = mytoolkit.ner(model_name="XLM Roberta base")
 	nertags = ner.getNERTags(sentence)
 
 	for i in range(len(langTags)):
@@ -42,11 +44,11 @@ def cmi(sentence):
 	return 0
 
 def M_Index(sentence):
-	mytoolkit = HinglishToolKit()
-	lid = mytoolkit.XLM_HIEN_LID()
+	mytoolkit = TaskToolKit("hineng")
+	lid = mytoolkit.lid(model_name="XLM Roberta base")
 
 	langTags = lid.getlangIds(sentence)
-	ner = mytoolkit.XLM_HIEN_NER()
+	ner = mytoolkit.ner(model_name="XLM Roberta base")
 	nertags = ner.getNERTags(sentence)
 
 	for i in range(len(langTags)):
@@ -78,11 +80,11 @@ def M_Index(sentence):
 	return (1- sigma_pj)/((k-1)*sigma_pj)
 
 def I_index(sentence):
-	mytoolkit = HinglishToolKit()
-	lid = mytoolkit.XLM_HIEN_LID()
+	mytoolkit = TaskToolKit("hineng")
+	lid = mytoolkit.lid(model_name="XLM Roberta base")
 
 	langTags = lid.getlangIds(sentence)
-	ner = mytoolkit.XLM_HIEN_NER()
+	ner = mytoolkit.ner(model_name="XLM Roberta base")
 	nertags = ner.getNERTags(sentence)
 
 	for i in range(len(langTags)):
@@ -98,11 +100,11 @@ def I_index(sentence):
 
 
 def burstiness(sentence):
-	mytoolkit = HinglishToolKit()
-	lid = mytoolkit.XLM_HIEN_LID()
+	mytoolkit = TaskToolKit("hineng")
+	lid = mytoolkit.lid(model_name="XLM Roberta base")
 
 	langTags = lid.getlangIds(sentence)
-	ner = mytoolkit.XLM_HIEN_NER()
+	ner = mytoolkit.ner(model_name="XLM Roberta base")
 	nertags = ner.getNERTags(sentence)
 
 	for i in range(len(langTags)):

@@ -9,13 +9,14 @@ from cmtt.tasks.POS import *
 import os 
 import json
 from tabulate import tabulate
-
 path = os.path.dirname(os.path.realpath(__file__))
 tasks_file_path = os.path.join(path, "tasks.json")
 
 # write all languages in small letters
+    
 
-class LanguageToolKit:
+
+class TaskToolKit:
     '''Provides model filtering functions based on tasks and languages'''
     def __init__(self, lang, tasks_file = tasks_file_path):
         self.lang = lang
@@ -96,21 +97,56 @@ class LanguageToolKit:
             table = tabulate(rows, headers=headers, tablefmt="grid")
             return table   
         return model_list
+    
+    def lid(self, model_name: str):
+        model_info = self.model_info_file("lid")
+        if model_info == None:
+            print(f"Task not available for {self.lang} language")
+            return
+        for models in model_info:
+            if model_name.lower() in models["Model name"].lower() and self.lang in models['language']:
+                model_class = globals()[models['Invoke By']] # type: ignore
+                model = model_class()
+                break
+            else:
+                print(f"{model_name} model not found for LID in {self.lang} language")
+                return                                                
+        return model
+    
+    def ner(self, model_name: str):
+        model_info = self.model_info_file("ner")
+        if model_info == None:
+            print(f"Task not available for {self.lang} language")
+            return
+        for models in model_info:
+            if model_name.lower() in models["Model name"].lower() and self.lang in models['language']:
+                model_class = globals()[models['Invoke By']] # type: ignore
+                model = model_class()
+                break
+            else:
+                print(f"{model_name} model not found for LID in {self.lang} language")
+                return                                                
+        return model
+
+    def pos(self, model_name: str):
+        model_info = self.model_info_file("pos")
+        if model_info == None:
+            print(f"Task not available for {self.lang} language")
+            return
+        for models in model_info:
+            if model_name.lower() in models["Model name"].lower() and self.lang in models['language']:
+                model_class = globals()[models['Invoke By']] # type: ignore
+                model = model_class()
+                break
+            else:
+                print(f"{model_name} model not found for LID in {self.lang} language")
+                return                                                
+        return model
+
+
   
     
-class HinglishToolKit(LanguageToolKit):
-    '''Toolkit for Hindi English mixed text'''
-    XLM_HIEN_LID = XLM_HIEN_LID
-    XLM_HIEN_NER = XLM_HIEN_NER
-    XLM_HIEN_POS = XLM_HIEN_POS
 
-    def __init__(self):
-        super().__init__('hineng')
-
-class SpanishEnglishToolKit(LanguageToolKit):
-    '''Toolkit for Spanish English mixed text'''
-    def __init__(self):
-        super().__init__('spaeng')
 
         
 

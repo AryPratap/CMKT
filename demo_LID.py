@@ -1,9 +1,9 @@
-from cmtt.tasks import HinglishToolKit
+from cmtt.tasks import TaskToolKit
 
-mytoolkit = HinglishToolKit()
+mytoolkit = TaskToolKit("hineng")
 
 
-lid = mytoolkit.XLM_HIEN_LID()
+lid = mytoolkit.lid(model_name="XLM Roberta base")
 sentence = 'tu kesa hai mere bhai, kyuki I am fine. Empowerment toh people choddega nhi, right?'
 
 lst = lid.getLangTags(sentence)
