@@ -24,7 +24,7 @@ def check_input_language(language_code: str):
 
 path = Path(__file__).parent
 
-class Sentencepiece_tokenizer():
+class SentencepieceTokenizer():
     def __init__(self, lang: str):
         self.lang = lang
         if (check_input_language(self.lang)==-1):

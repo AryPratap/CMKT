@@ -47,7 +47,12 @@ sentence = "RAHUL jab dieting par hota hai toh green tea peeta hai."
 # print(lid.getLangTags(sentence))
 
 
-tokenizer = Tokenizers("en")
+# tokenizer = Tokenizers("en")
 
 
-print(tokenizer.word_tokenize(sentence))
+# print(tokenizer.word_tokenize(sentence))
+
+stemmer = Stemmer()
+hindi_text = "ख़रीदारों के लिए मार्ग दर्शिका"
+hindi_stemmed = stemmer.hindi_stem(hindi_text)
+print(hindi_stemmed)

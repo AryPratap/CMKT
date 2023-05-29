@@ -1,8 +1,8 @@
 class LanguageCodes:
     hindi = 'hi'
-    hinglish = 'hi-en'
+    hinglish = 'hi-enRom'
     english = 'en'
-    hinDev_engRom = 'hinDev_engRom'
+    hinDev_engRom = 'hineng'
 
     def get_all_language_codes(self):
         return [self.hindi, self.hinglish, self.english, self.hinDev_engRom]
