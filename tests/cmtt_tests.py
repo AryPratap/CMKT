@@ -5,7 +5,7 @@ from cmtt.preprocessing import *
 class CMTTTestCase(unittest.TestCase):
   def setUp(self):
     self.load_url = load_url
-    self.list_dataset_keys = list_dataset_keys
+    self.list_dataset_keys = ListDatasetKeys()
     self.WordT = WordTokenizer()
     self.WordpieceT = Wordpiece_tokenizer()
     self.WhitespaceT = WhitespaceTokenizer()

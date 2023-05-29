@@ -1,7 +1,6 @@
 from cmtt.tasks import *
-from cmtt.preprocessing import hien_stemmer
-from cmtt.metrics import M_Index
-from cmtt.metrics import I_index, burstiness
+from cmtt.preprocessing import *
+from cmtt.metrics import *
 from cmtt.data import *
 
 #mytoolkit = HinglishToolKit()
@@ -42,9 +41,13 @@ sentence = "RAHUL jab dieting par hota hai toh green tea peeta hai."
 # # List CMTT datasets for hineng language
 # print("List CMTT Datasets Function (search_key = language, search_term = hineng): ")
 # data1 = ListDatasets(search_key="language", search_term = "hineng", isPrint=True, details=True)
-mytoolkit = TaskToolKit(lang="hineng")
-lid = mytoolkit.lid(model_name="XLM ")
+# mytoolkit = TaskToolKit(lang="hineng")
+# lid = mytoolkit.lid(model_name="XLM ")
 
-print(lid.getLangTags(sentence))
+# print(lid.getLangTags(sentence))
 
 
+tokenizer = Tokenizers("en")
+
+
+print(tokenizer.word_tokenize(sentence))

@@ -1,5 +1,5 @@
 from transformers import AutoModelForTokenClassification, AutoTokenizer
-from cmtt.preprocessing import RomanTokenizer
+from cmtt.preprocessing import Tokenizers
 import torch 
 from pathlib import Path
 import os 
@@ -23,7 +23,7 @@ class XLM_HIEN_NER():
 
         self.model = AutoModelForTokenClassification.from_pretrained(dest)
         self.tokenizer = AutoTokenizer.from_pretrained(dest)
-        self.wordTokenizer = RomanTokenizer()
+        self.wordTokenizer = Tokenizers("en")
         self.id2label = {
             "0": "O",
             "1": "B-ORGANISATION",

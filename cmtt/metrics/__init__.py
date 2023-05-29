@@ -10,7 +10,6 @@ class Metrics:
 	def AvailableMetrics(self):
 		return ["cmi", "M-Index", "I-Index", "burstiness"]
 
-
 	def metrics(self,metrics, sentence):
 		mytoolkit = TaskToolKit(self.language)
 		lid = mytoolkit.lid(model_name="XLM Roberta base")
