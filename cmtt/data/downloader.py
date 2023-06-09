@@ -200,7 +200,7 @@ def download_cmtt_datasets(name_list):
   return path_lists
             
 
-def download_dataset_url(url, fileName="defaultFileName"):
+def download_dataset_external(url, fileName="defaultFileName"):
   """
     Downloads a dataset from a url into 'C:\cmtt'
     :param url: the source url of the dataset

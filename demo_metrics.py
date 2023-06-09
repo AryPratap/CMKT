@@ -8,18 +8,18 @@ print("Total available metrics")
 print(metrics.AvailableMetrics())
 
 # Code-Mixing Index 
-print("CMI: ",metrics.metrics(metrics="cmi", sentence=sent))
+print("CMI: ",metrics.metrics(name="cmi", sentence=sent))
 print()
 
 # M-Index 
-print("M-Index: ",metrics.metrics(metrics="M-Index", sentence=sent))
+print("M-Index: ",metrics.metrics(name="M-Index", sentence=sent)) #name 
 print()
 
 #I-Index
-print("I-Index: ",metrics.metrics(metrics="I-Index", sentence=sent))
+print("I-Index: ",metrics.metrics(name="I-Index", sentence=sent))
 print()
 
 # Burstiness
-print("burstiness: ",metrics.metrics(metrics="burstiness", sentence=sent))
+print("burstiness: ",metrics.metrics(name="burstiness", sentence=sent))
 print()
 

@@ -658,7 +658,7 @@ class RomanDevanagariTokenizer():
 class Tokenizers:
   def __init__(self, lang):
         
-        if lang not in ['hi','en','hineng']:
+        if lang.lower() not in ['hi','en','hineng']:
            raise ValueError("No tokenizer available for the entered language.")
         # Starting quotes.
         self.start_quotations = [

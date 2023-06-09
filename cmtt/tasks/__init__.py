@@ -13,7 +13,7 @@ path = os.path.dirname(os.path.realpath(__file__))
 tasks_file_path = os.path.join(path, "tasks.json")
 
 # write all languages in small letters
-    
+SUPPORTED_LANGUAGES = ['hineng']
 
 
 class TaskToolKit:
@@ -21,6 +21,8 @@ class TaskToolKit:
     def __init__(self, lang, tasks_file = tasks_file_path):
         self.lang = lang
         self.tasks = self.load_tasks(tasks_file)
+        if lang.lower() not in SUPPORTED_LANGUAGES:
+            raise ValueError(f"{self.lang} language not supported for TaskToolKit")
 
     def load_tasks(self, task_file):
         '''

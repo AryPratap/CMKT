@@ -9,7 +9,7 @@ import pandas as pd
 from urllib.request import urlopen
 import os
 
-from cmtt.data.downloader import download_dataset_url, download_cmtt_datasets
+from cmtt.data.downloader import download_dataset_external, download_cmtt_datasets
 
 AUTO_FORMATS = {
   "pickle": "pickle",

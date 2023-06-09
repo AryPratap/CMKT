@@ -1,7 +1,7 @@
 {
   "datasets": [
     {
-      "name":"linc_ner_hineng",
+      "name":"linc_ner_hineng", 
       "language":"hineng",
       "task":"NER",
       "train/test/dev examples": "1243/522/314",
@@ -11,7 +11,7 @@
       "last_modified": "22-09-2022"
     },
     {
-      "name":"L3Cube_HingLID_all",
+      "name":"L3Cube_HingLID_all",  
       "language":"hineng",
       "task":"LID",
       "train/test/dev examples": "31756/6420/6279",
@@ -21,7 +21,7 @@
       "last_modified": "22-09-2022"
     },
     {
-      "name":"linc_lid_spaeng",
+      "name":"linc_lid_spaeng", 
       "language":"spaeng",
       "task":"LID",
       "train/test/dev examples": "21030/8289/3332",

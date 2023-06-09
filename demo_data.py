@@ -26,7 +26,7 @@ print()
 
 # List CMTT datasets for hineng language
 print("List CMTT Datasets Function (search_key = language, search_term = hineng): ")
-data = ListDatasets(search_key="language", search_term = "hineng", isPrint=True)
+data = ListDatasets(search_key="language", search_term = "eng", isPrint=True)
 print()
 
 # Download cmtt datasets
@@ -34,7 +34,7 @@ print("Download cmtt datasets function")
 lst = download_cmtt_datasets(["linc_ner_hineng", "L3Cube_HingLID_all", "linc_lid_spaeng"])
 
 print()
-path = download_dataset_url('https://world.openfoodfacts.org/api/v0/product/5060292302201.json')
+path = download_dataset_external('https://world.openfoodfacts.org/api/v0/product/5060292302201.json')
 
 print()
 print(lst)

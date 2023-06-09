@@ -52,7 +52,7 @@ sentence = "RAHUL jab dieting par hota hai toh green tea peeta hai."
 
 # print(tokenizer.word_tokenize(sentence))
 
-stemmer = Stemmer()
+stemmer = Stemmer('njkdfs')
 hindi_text = "ख़रीदारों के लिए मार्ग दर्शिका"
 hindi_stemmed = stemmer.hindi_stem(hindi_text)
 print(hindi_stemmed)

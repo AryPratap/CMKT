@@ -10,7 +10,11 @@ class Metrics:
 	def AvailableMetrics(self):
 		return ["cmi", "M-Index", "I-Index", "burstiness"]
 
-	def metrics(self,metrics, sentence):
+	def metrics(self,name, sentence):
+
+		if name not in self.AvailableMetrics():
+			raise KeyError(f'{name} metrics not found.')
+		
 		mytoolkit = TaskToolKit(self.language)
 		lid = mytoolkit.lid(model_name="XLM Roberta base")
 
@@ -21,7 +25,7 @@ class Metrics:
 				if nertags[i][1] != 'O':
 					langTags[i] = '8'
 
-		if metrics == "cmi":
+		if name == "cmi":
 			
 					
 			lang1_words = 0
@@ -45,7 +49,7 @@ class Metrics:
 				return 100*(1 - (max_count/(n-u)))
 			return 0
 			
-		elif metrics == "M-Index":
+		elif name == "M-Index":
 					
 			lang1_words = 0
 			for i in langTags:
@@ -71,7 +75,7 @@ class Metrics:
 
 			return (1- sigma_pj)/((k-1)*sigma_pj)
 		
-		elif metrics == "I-Index":
+		elif name == "I-Index":
 			S = 0
 
 			for i in range(len(langTags)-1):
@@ -79,7 +83,7 @@ class Metrics:
 					S = S+1
 			return S/(len(langTags)-1)
 		
-		elif metrics == "burstiness":
+		elif name == "burstiness":
 			# Calculate the language spans
 			spans = []
 			current_span = 1
@@ -98,7 +102,8 @@ class Metrics:
 			# Calculate burstiness
 			burstiness = (sigma_r - mr) / (sigma_r + mr)
 			return burstiness
-
+		
+		
 
 
 

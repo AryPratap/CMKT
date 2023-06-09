@@ -102,9 +102,10 @@ from cmtt.tasks import TaskToolKit
 #       results.append(hindi_stem(hi_token))
 
 #   return results
+LANGUAGES = ['hi','en','hineng']
 
 class Stemmer:
-    def __init__(self): 
+    def __init__(self,lang): 
         self.words_dict  = { "तैराक":"तैर",
                 "चालाक":"चाल",
                 "कूलाक":"कूल",
@@ -132,6 +133,12 @@ class Stemmer:
         self.dict_special_suffixes = {"र्":"ृ",
                          "ज्य":"ज्",
                          "त्य":"त्"}
+        
+        self.lang = lang
+
+        if (lang.lower() not in LANGUAGES):
+            raise ValueError(f'{self.lang} language not supported')
+
         
     def hi_stem(self,word, clean=False,chars=None):
         if clean == True:
@@ -173,6 +180,48 @@ class Stemmer:
             text = re.sub(r"[" +chars+ "()\"#/@;:<>{}`+=~|!?,']", "", text)
         return text
     
+    def stem(self,text):
+        
+        if self.lang.lower() == 'hi':
+            ans = ""
+            for i in text.split(' '):
+                ans += self.hi_stem(i)
+                ans += " "
+
+            return ans
+        
+        elif self.lang.lower() == 'en':
+            eng_stemmer = PorterStemmer()
+            stemmed = eng_stemmer.stem(text)
+            return stemmed
+        
+        elif self.lang.lower() == 'hineng':
+            results = []
+        
+            hientoolkit = TaskToolKit("hineng")
+            
+            lid = hientoolkit.lid(model_name="XLM Roberta base")
+            translator = Translator()
+            en_stemmer = PorterStemmer()
+
+            tokens_tags_list = lid.getLangTags(text)
+
+            for i in tokens_tags_list:
+                if(i[1] == 'EN'):
+                    results.append(en_stemmer.stem(i[0]))
+                elif(i[1] == "HI"):
+                    hi_token = translator.translate(i[0], src = 'hi', dest = 'hi').text
+                    if (bool(re.match(r"^[A-Za-z]", hi_token))):
+                        hi_token = translator.translate(i[0], src = 'hi', dest = 'hi')
+                        
+                    hi_token_ans = ""
+                    for i in hi_token.split(' '):
+                        hi_token_ans += self.hi_stem(i)
+                        hi_token_ans += " "
+                    results.append(hi_token_ans)
+
+            return results
+
     def hindi_stem(self,text):
         ans = ""
         for i in text.split(' '):
