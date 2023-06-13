@@ -2,7 +2,7 @@ numpy
 pandas
 requests
 tqdm
-fastai==1.0.57
+fastai==2.7.12
 sentencepiece
 torch==2.0.1
 torchtext==0.15.2
