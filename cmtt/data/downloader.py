@@ -214,7 +214,7 @@ def download_dataset_external(url, fileName="defaultFileName"):
   if format == "gz":
     format = url_parts[-2]
 
-  # newpath = r'C:\cmtt'
+  # newpath = r'C:\cmtt' # os.getcwd()-> currently working directory 
   newpath = os.path.join(os.getcwd(), "datasets")
   if not os.path.exists(newpath):
     os.makedirs(newpath)

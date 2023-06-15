@@ -222,40 +222,40 @@ class Stemmer:
 
             return results
 
-    def hindi_stem(self,text):
-        ans = ""
-        for i in text.split(' '):
-            ans += self.hi_stem(i)
-            ans += " "
+    # def hindi_stem(self,text):
+    #     ans = ""
+    #     for i in text.split(' '):
+    #         ans += self.hi_stem(i)
+    #         ans += " "
 
-        return ans
+    #     return ans
     
-    def eng_stem(self,text):
-        eng_stemmer = PorterStemmer()
-        stemmed = eng_stemmer.stem(text)
+    # def eng_stem(self,text):
+    #     eng_stemmer = PorterStemmer()
+    #     stemmed = eng_stemmer.stem(text)
 
-        return stemmed
+    #     return stemmed
     
-    def hien_stemmer(self,text):
-        results = []
+    # def hien_stemmer(self,text):
+    #     results = []
         
-        hientoolkit = TaskToolKit("hineng")
+    #     hientoolkit = TaskToolKit("hineng")
         
-        lid = hientoolkit.lid(model_name="XLM Roberta base")
-        translator = Translator()
-        en_stemmer = PorterStemmer()
+    #     lid = hientoolkit.lid(model_name="XLM Roberta base")
+    #     translator = Translator()
+    #     en_stemmer = PorterStemmer()
 
-        tokens_tags_list = lid.getLangTags(text)
+    #     tokens_tags_list = lid.getLangTags(text)
 
-        for i in tokens_tags_list:
-            if(i[1] == 'EN'):
-                results.append(en_stemmer.stem(i[0]))
-            elif(i[1] == "HI"):
-                hi_token = translator.translate(i[0], src = 'hi', dest = 'hi').text
-                if (bool(re.match(r"^[A-Za-z]", hi_token))):
-                    hi_token = translator.translate(i[0], src = 'hi', dest = 'hi')
-                results.append(self.hindi_stem(hi_token))
+    #     for i in tokens_tags_list:
+    #         if(i[1] == 'EN'):
+    #             results.append(en_stemmer.stem(i[0]))
+    #         elif(i[1] == "HI"):
+    #             hi_token = translator.translate(i[0], src = 'hi', dest = 'hi').text
+    #             if (bool(re.match(r"^[A-Za-z]", hi_token))):
+    #                 hi_token = translator.translate(i[0], src = 'hi', dest = 'hi')
+    #             results.append(self.hindi_stem(hi_token))
 
-        return results
+    #     return results
 
 
