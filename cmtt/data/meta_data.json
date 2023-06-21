@@ -1,37 +1,147 @@
 {
     "datasets": [
       {
-        "url":"https://drive.google.com/file/d/1wTXfrahYD3zgM5ZCQOCTifXk0W6JP36i/view",
-        "id": "1wTXfrahYD3zgM5ZCQOCTifXk0W6JP36i",
-        "name":"linc_ner_hineng",
+        "url":"https://drive.google.com/file/d/123HxsTrmZUyuIqJmmwscVL6yb95eHmxi/view?usp=drive_link",
+        "id": "123HxsTrmZUyuIqJmmwscVL6yb95eHmxi",
+        "name":"lid_hineng_Mave_ACL2018",
+        "format":"zip",
+        "language":"hineng",
+        "task":"LID",
+        "credits": "Language Identification and Analysis of Code-Switched Social Media Text (Mave et al., ACL 2018)",
+        "source": "gdrive",
+        "year": "2018"
+      },
+      {
+        "url":"https://drive.google.com/file/d/13UZnCJVnTLDHG3uvbfcEV8-Qv1I_n1jq/view?usp=sharing",
+        "id": "13UZnCJVnTLDHG3uvbfcEV8-Qv1I_n1jq",
+        "name":"ner_hineng_Singh_ACL2018",
         "format":"zip",
         "language":"hineng",
         "task":"NER",
-        "credits": "Language Identification and Named Entity Recognition in {H}inglish Code Mixed Tweets; Singh, Kushagra and Sen, Indira and Kumaraguru, Ponnurangam",
+        "credits": "Language Identification and Named Entity Recognition in Hinglish Code Mixed Tweets (Singh et al., ACL 2018)",
         "source": "gdrive",
-        "last_modified": "22-09-2022"
+        "year": "2018"
       },
       {
-        "url":"https://drive.google.com/file/d/1E3BuLCmo_xC1jPvzpDJu85lEDQEsoXlz/view?usp=sharing",
-        "id": "1E3BuLCmo_xC1jPvzpDJu85lEDQEsoXlz",
-        "name":"L3Cube_HingLID_all",
-        "format":"txt",
-        "language":"hineng",
-        "task":"LID",
-        "credits": "L3Cube-HingCorpus and HingBERT: A Code Mixed Hindi-English Dataset and BERT Language Models; Nayak, Ravindra and Joshi, Raviraj",
+        "url": "https://drive.google.com/file/d/1T8J5JG7xHwxDU-u-ydv4aiLkPXEIo5Vg/view?usp=sharing",
+        "id": "1T8J5JG7xHwxDU-u-ydv4aiLkPXEIo5Vg",
+        "name": "ner_hineng_Singh_NEWS2018",
+        "format": "zip",
+        "language": "hineng",
+        "task": "NER",
+        "credits": "Named Entity Recognition for Hindi-English Code-Mixed Social Media Text (Singh et al., NEWS 2018)",
         "source": "gdrive",
-        "last_modified": "22-09-2022"
+        "year": "2018"
       },
       {
-        "url":"https://drive.google.com/file/d/1HSVqz0UnTfF2_aYMDcAAj4b8aeSJwV5r/view?usp=sharing",
-        "id": "1HSVqz0UnTfF2_aYMDcAAj4b8aeSJwV5r",
-        "name":"linc_lid_spaeng",
-        "format":"zip",
-        "language":"spaeng",
-        "task":"LID",
-        "credits": "Overview for the Second Shared Task on Language Identification in Code-Switched Data; Molina, Giovanni and AlGhamdi, Fahad and Ghoneim, Mahmoud and Hawwari, Abdelati and Rey-Villamizar, Nicolas and Diab, Mona and Solorio, Thamar",
+        "url": "https://drive.google.com/file/d/1_ezTF6wO31yL9Y8lGEfJDpJFlTzRB4tP/view?usp=sharing",
+        "id": "1_ezTF6wO31yL9Y8lGEfJDpJFlTzRB4tP",
+        "name": "pos_hineng_Singh_SocialNLP2018",
+        "format": "zip",
+        "language": "hineng",
+        "task": "POS",
+        "credits": "A Twitter Corpus for Hindi-English Code Mixed POS Tagging (Singh et al., SocialNLP 2018)",
         "source": "gdrive",
-        "last_modified": "05-10-2022"
+        "year": "2018"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1JPTTkbRs5KViQTc0i6MQ9vUy2AOZoGvH/view?usp=sharing",
+        "id": "1JPTTkbRs5KViQTc0i6MQ9vUy2AOZoGvH",
+        "name": "mt_hineng_Srivastava_2021hinge",
+        "format": "zip",
+        "language": "hineng",
+        "task": "machine translation",
+        "credits": "HinGE: A Dataset for Generation and Evaluation of Code-Mixed Hinglish Text(srivastava2021hinge)",
+        "source": "gdrive",
+        "year": "2021"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1hbTuIXJOi0Lqrudu343RLXFDmk7L2viQ/view?usp=sharing",
+        "id": "1hbTuIXJOi0Lqrudu343RLXFDmk7L2viQ",
+        "name": "mt_hineng_lince",
+        "format": "zip",
+        "language": "hineng",
+        "task": "machine translation",
+        "credits": "Can be found on lince benchmark",
+        "source": "gdrive",
+        "year": "####"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1T2r8CjEf2cbBDhtJ39hGEJAhDv9r_vGE/view?usp=sharing",
+        "id": "1T2r8CjEf2cbBDhtJ39hGEJAhDv9r_vGE",
+        "name": "mt_hineng_Srivastava_WNUT2020",
+        "format": "zip",
+        "language": "hineng",
+        "task": "machine translation",
+        "credits": "PHINC: A Parallel Hinglish Social Media Code-Mixed Corpus for Machine Translation (Srivastava & Singh, WNUT 2020",
+        "source": "gdrive",
+        "year": "2020"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1Rvb0XfRAbTgvf-MJUmuwEdggA25X59mz/view?usp=sharing",
+        "id": "1Rvb0XfRAbTgvf-MJUmuwEdggA25X59mz",
+        "name": "sarcasm_hineng_Swami_2018corpus",
+        "format": "zip",
+        "language": "hineng",
+        "task": "sarcasm detection",
+        "credits": "A Corpus of English-Hindi Code-Mixed Tweets for Sarcasm Detection (swami2018corpus),",
+        "source": "gdrive",
+        "year": "2018"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1WWykrAGsdOpZxfq5Non1zviUrMr6i6c-/view?usp=sharing",
+        "id": "1WWykrAGsdOpZxfq5Non1zviUrMr6i6c-",
+        "name": "sentiment_hineng_Joshi_COLING2016",
+        "format": "zip",
+        "language": "hineng",
+        "task": "sentiment analysis",
+        "credits": "Towards Sub-Word Level Compositions for Sentiment Analysis of Hindi-English Code Mixed Text (Joshi et al., COLING 2016)",
+        "source": "gdrive",
+        "year": "2016"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1qFe2EzDKtrhLehHrQmIK0dex_-z4jnQf/view?usp=sharing",
+        "id": "1qFe2EzDKtrhLehHrQmIK0dex_-z4jnQf",
+        "name": "sentiment_hineng_Shete_2016",
+        "format": "zip",
+        "language": "hineng",
+        "task": "sentiment analysis",
+        "credits": "Vrishank Shete, GaganDeep Chhabra Singh, and Lokesh Mittal. 2016. Sentiment analysis on Hindi-English code mixed data using SVM",
+        "source": "gdrive",
+        "year": "2016"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1Yl7JLHfnWAoNOGq8jS8Qf21mSs56lghO/view?usp=sharing",
+        "id": "1Yl7JLHfnWAoNOGq8jS8Qf21mSs56lghO",
+        "name": "humor_hineng_Ankush_2018",
+        "format": "zip",
+        "language": "hineng",
+        "task": "humor detection",
+        "credits": "Ankush Khandelwal. 2018. Humor detection corpus.",
+        "source": "gdrive",
+        "year": "2018"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1yaZwycTidCSjV9_VTFe63UEpcy2MfyWp/view?usp=sharing",
+        "id": "1yaZwycTidCSjV9_VTFe63UEpcy2MfyWp",
+        "name": "sentiment_hineng_Patwa_SemEval2020",
+        "format": "zip",
+        "language": "hineng",
+        "task": "sentiment analysis",
+        "credits": "SemEval-2020 Task 9: Overview of Sentiment Analysis of Code-Mixed Tweets (Patwa et al., SemEval 2020)",
+        "source": "gdrive",
+        "year": "2020"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1gln-aigCIGQOKZAKbO6cbBxIGPYze-nK/view?usp=sharing",
+        "id": "1gln-aigCIGQOKZAKbO6cbBxIGPYze-nK",
+        "name": "mt_hineng_Dhar_LR4NLP2018",
+        "format": "zip",
+        "language": "hineng",
+        "task": "machine translation",
+        "credits": "Enabling Code-Mixed Translation: Parallel Corpus Creation and MT Augmentation Approach (Dhar et al., LR4NLP 2018)",
+        "source": "gdrive",
+        "year": "2018"
       }
     ]
   }

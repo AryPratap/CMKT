@@ -52,7 +52,14 @@ sentence = "RAHUL jab dieting par hota hai toh green tea peeta hai."
 
 # print(tokenizer.word_tokenize(sentence))
 
-stemmer = Stemmer('hineng')
-hindi_text = "ख़रीदारों के लिए मार्ग दर्शिका"
-hindi_stemmed = stemmer.stem(hindi_text)
-print(hindi_stemmed)
+# stemmer = Stemmer('hineng')
+# hindi_text = "ख़रीदारों के लिए मार्ग दर्शिका"
+# hindi_stemmed = stemmer.stem(hindi_text)
+# print(hindi_stemmed)
+# mytoolkit = TaskToolKit("hineng")
+# ner = mytoolkit.ner(model_name="XLM Roberta base")
+# lst = ner.getNERTags("stupid move, considering their aging population and lack of a manual labor force.")
+
+# Download cmtt datasets
+print("Download cmtt datasets function")
+lst = download_cmtt_datasets(["mt_hineng_Dhar_LR4NLP2018"])
