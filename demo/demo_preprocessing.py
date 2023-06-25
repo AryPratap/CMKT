@@ -1,5 +1,5 @@
-from cmtt.preprocessing import *
-print("\nCMTT Preprocessing Subpackage Demo")
+from cmkt.preprocessing import *
+print("\nCMkT Preprocessing Subpackage Demo")
 print()
 
 # Tokenizers

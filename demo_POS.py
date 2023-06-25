@@ -1,4 +1,4 @@
-from cmtt.tasks import TaskToolKit
+from cmkt.tasks import TaskToolKit
 
 sentence = 'tu kesa hai mere bhai, kyuki I am fine. Empowerment toh people'
 mytoolkit = TaskToolKit("hineng")

@@ -2,8 +2,8 @@ from pathlib import Path
 import os
 from tqdm import tqdm
 import requests
-from cmtt.preprocessing.sentence_piece_tokenizer.config import LanguageCodes, LMConfigs
-from cmtt.data.downloader import download_file_from_google_drive
+from cmkt.preprocessing.sentence_piece_tokenizer.config import LanguageCodes, LMConfigs
+from cmkt.data.downloader import download_file_from_google_drive
 
 all_language_codes = LanguageCodes()
 

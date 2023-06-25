@@ -1,4 +1,4 @@
-from cmtt.preprocessing import Tokenizers
+from cmkt.preprocessing import Tokenizers
 
 
 ## Tokenizing english Text 

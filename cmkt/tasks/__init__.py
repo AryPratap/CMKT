@@ -3,9 +3,9 @@
 Language specific toolkits for searching, loading and running models for different NLP tasks.
 """
 
-from cmtt.tasks.LID import *
-from cmtt.tasks.NER import *
-from cmtt.tasks.POS import *
+from cmkt.tasks.LID import *
+from cmkt.tasks.NER import *
+from cmkt.tasks.POS import *
 import os 
 import json
 from tabulate import tabulate

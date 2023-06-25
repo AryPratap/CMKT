@@ -14,14 +14,14 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
 
 # This call to setup() does all the work
 setup(
-  name="cmtt",
+  name="cmkt",
   version="0.8.0",
   description="A library for processing Code Mixed Text. Still in development!",
   long_description_content_type="text/markdown",
   long_description=long_description,
-  url="https://cmtt.readthedocs.io/",
-  author="Reuben Devanesan",
-  author_email="reubendevanesan@gmail.com",
+  url="https://cmkt.readthedocs.io/",
+  author="Lingo IITGN",
+  author_email="lingo@iitgn.ac.in",
   license="MIT",
   classifiers=[
     "Intended Audience :: Developers",
@@ -38,7 +38,7 @@ setup(
   # packages=["cmtt", "cmtt/data", "cmtt/preprocessing"],
   packages=find_packages(),
   include_package_data=True,
-  data_files=[('cmtt/data', ['cmtt/data/data.json']), ('cmtt/preprocessing/tokenizer', ['cmtt/preprocessing/tokenizer/vocab.txt', 'cmtt/preprocessing/tokenizer/vocab_2.txt','cmtt/preprocessing/tokenizer/english.pickle']), ('cmtt/tasks', ['cmtt/tasks/tasks.json']), ('cmtt/tasks/LID', ['cmtt/tasks/LID/model_info.json']), ('cmtt/tasks/NER', ['cmtt/tasks/NER/model_info.json']), ('cmtt/tasks/POS', ['cmtt/tasks/POS/model_info.json'])],
+  data_files=[('cmkt/data', ['cmkt/data/data.json']), ('cmkt/preprocessing/tokenizer', ['cmkt/preprocessing/tokenizer/vocab.txt', 'cmkt/preprocessing/tokenizer/vocab_2.txt','cmkt/preprocessing/tokenizer/english.pickle']), ('cmkt/tasks', ['cmkt/tasks/tasks.json']), ('cmkt/tasks/LID', ['cmkt/tasks/LID/model_info.json']), ('cmkt/tasks/NER', ['cmkt/tasks/NER/model_info.json']), ('cmkt/tasks/POS', ['cmkt/tasks/POS/model_info.json'])],
   install_requires=[
     "numpy", 
     "pandas", 

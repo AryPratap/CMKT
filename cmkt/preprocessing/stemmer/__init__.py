@@ -1,8 +1,8 @@
 from fastai.text import *
 from googletrans import Translator
 import re
-from cmtt.preprocessing.stemmer.stemmer import *
-from cmtt.tasks import TaskToolKit
+from cmkt.preprocessing.stemmer.stemmer import *
+from cmkt.tasks import TaskToolKit
 
 # words_dict  = { "तैराक":"तैर",
 #                 "चालाक":"चाल",

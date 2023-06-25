@@ -1,8 +1,8 @@
-from cmtt.tasks import HinglishToolKit
+from cmkt.tasks import TaskToolKit
 
 sentence = 'tu kesa hai mere bhai, kyuki I am fine. Empowerment toh people'
-mytoolkit = HinglishToolKit()
-pos = mytoolkit.XLM_HIEN_POS()
+mytoolkit = TaskToolKit("hineng")
+pos = mytoolkit.pos(model_name="XLM Roberta base")
 
 lst = pos.getPOSTags(sentence)
 print(lst)

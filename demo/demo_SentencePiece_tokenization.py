@@ -1,11 +1,11 @@
-from cmtt.preprocessing import *
+from cmkt.preprocessing import *
 
-print("\nCMTT Preprocessing Subpackage Demo (Sentence Piece Tokenizer): ")
+print("\nCMKT Preprocessing Subpackage Demo (Sentence Piece Tokenizer): ")
 print()
 
 # Sentence piece based Tokenizer for English
 _en = " This is a sentence-piece based tokenizer, supporting the english language."
-Spm_en = Sentencepiece_tokenizer('en')
+Spm_en = SentencepieceTokenizer('en')
 lst = Spm_en.tokenize(_en)
 with open(r"test_en.txt", 'w', encoding = "utf-8") as f:
   for i in lst:
@@ -13,7 +13,7 @@ with open(r"test_en.txt", 'w', encoding = "utf-8") as f:
 
 # Sentence piece based Tokenizer for Hindi
 _hi = " मैं इनदोनों श्रेणियों के बीच कुछ भी० सामान्य नहीं देखता।"
-Spm_hi = Sentencepiece_tokenizer('hi')
+Spm_hi = SentencepieceTokenizer('hi')
 lst = Spm_hi.tokenize(_hi)
 with open(r"test_hi.txt", 'w', encoding = "utf-8") as f:
   for i in lst:
@@ -21,7 +21,7 @@ with open(r"test_hi.txt", 'w', encoding = "utf-8") as f:
 
 # Sentence piece based Tokenizer for Hinglish
 _hien = " hi kya haal chaal? hum cmtt naamkaran ki python library develop kar rahe hain"
-Spm_hien = Sentencepiece_tokenizer('hi-en')
+Spm_hien = SentencepieceTokenizer('hi-enRom')
 lst = Spm_hien.tokenize(_hien)
 with open(r"test_hien.txt", 'w', encoding = "utf-8") as f:
   for i in lst:
@@ -29,7 +29,7 @@ with open(r"test_hien.txt", 'w', encoding = "utf-8") as f:
 
 # Sentence piece based Tokenizer for Devnagari Hindi and Roman English Mixed Text
 _hinDev_engRom = " कैसे हो मित्र इनदोनों? Aur batao, I am good."
-Spm_hien = Sentencepiece_tokenizer('hinDev_engRom')
+Spm_hien = SentencepieceTokenizer('hineng')
 lst = Spm_hien.tokenize(_hinDev_engRom)
 with open(r"test_hinDev_engRom.txt", 'w', encoding = "utf-8") as f:
   for i in lst:

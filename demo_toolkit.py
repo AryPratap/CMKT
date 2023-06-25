@@ -1,5 +1,5 @@
-from cmtt.tasks import TaskToolKit
-print("\nCMTT tasks  toolkit Demo")
+from cmkt.tasks import TaskToolKit
+print("\nCMKT tasks  toolkit Demo")
 print()
 
 # Initialize hinglish and SpanishEnglish toolkits

@@ -1,4 +1,4 @@
-from cmtt.tasks import TaskToolKit
+from cmkt.tasks import TaskToolKit
 
 sentence = 'Bangladesh and Tripura India ko east side mai hain.'
 mytoolkit = TaskToolKit("hineng")

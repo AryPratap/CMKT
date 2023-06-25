@@ -1,14 +1,25 @@
-from cmtt.metrics import *
+from cmkt.metrics import *
 
-sentence = "RAHUL jab dieting par hota hai toh green tea peeta hai."
+sent = "RAHUL jab dieting par hota hai toh green tea peeta hai."
+metrics = Metrics(language="hineng")
+
+# Total Available metrics
+print("Total available metrics")
+print(metrics.AvailableMetrics())
 
 # Code-Mixing Index 
-print(cmi(sentence))
+print("CMI: ",metrics.metrics(name="cmi", sentence=sent))
 print()
 
 # M-Index 
-print(M_Index(sentence))
+print("M-Index: ",metrics.metrics(name="M-Index", sentence=sent)) #name 
 print()
 
 #I-Index
-print(I_index(sentence))
+print("I-Index: ",metrics.metrics(name="I-Index", sentence=sent))
+print()
+
+# Burstiness
+print("burstiness: ",metrics.metrics(name="burstiness", sentence=sent))
+print()
+

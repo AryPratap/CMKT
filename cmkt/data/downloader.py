@@ -134,7 +134,7 @@ def save_response_content(response, destination, name, format):
     return destination
   
 
-def download_cmtt_datasets(name_list):
+def download_cmkt_datasets(name_list):
   """
     Downloads an inbuilt cmtt dataset present in data.json into the user profile directory
     :param name_list: list of cmtt datasets to be downloaded
@@ -169,7 +169,7 @@ def download_cmtt_datasets(name_list):
       flag = 0
 
     user_root = os.path.expanduser("~")
-    newpath = os.path.join(user_root, "cmtt")
+    newpath = os.path.join(user_root, "cmkt")
 
     if not os.path.exists(newpath):
       os.makedirs(newpath)

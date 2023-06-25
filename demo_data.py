@@ -1,5 +1,5 @@
-from cmtt.data import *
-print("\nCMTT Data Subpackage Demo")
+from cmkt.data import *
+print("\nCMKT Data Subpackage Demo")
 print()
 
 # Load online resource files
@@ -13,25 +13,25 @@ print(result_csv['about'][20])
 print(len(result_csv['about']))
 print()
 
-# List CMTT dataset keys and all available cmtt datasets
-print("List dataset keys and cmtt datasets function")
+# List CMKT dataset keys and all available cmkt datasets
+print("List dataset keys and cmkt datasets function")
 keys = ListDatasetKeys()
 print(keys)
 print()
 
-# List CMTT datasets for the task of LID
-print("List CMTT Datasets Function (search_key = task, search_term = ner): ")
+# List CMKT datasets for the task of LID
+print("List CMKT Datasets Function (search_key = task, search_term = ner): ")
 data = ListDatasets(search_key="task", search_term = "ner", isPrint=True,details=True)
 print()
 
-# List CMTT datasets for hineng language
-print("List CMTT Datasets Function (search_key = language, search_term = hineng): ")
+# List CMKT datasets for hineng language
+print("List CMKT Datasets Function (search_key = language, search_term = hineng): ")
 data = ListDatasets(search_key="language", search_term = "eng", isPrint=True)
 print()
 
-# Download cmtt datasets
-print("Download cmtt datasets function")
-lst = download_cmtt_datasets(["linc_ner_hineng", "L3Cube_HingLID_all", "linc_lid_spaeng"])
+# Download cmkt datasets
+print("Download cmkt datasets function")
+lst = download_cmkt_datasets(["lid_hineng_Mave_ACL2018"])
 
 print()
 path = download_dataset_external('https://world.openfoodfacts.org/api/v0/product/5060292302201.json')

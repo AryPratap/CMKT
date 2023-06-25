@@ -1,4 +1,4 @@
-from cmtt.preprocessing.tokenizer import WordTokenizer
+from cmkt.preprocessing.tokenizer import WordTokenizer
 
 def search_word(corpus, word, tokenize = False, width = 10):
   """

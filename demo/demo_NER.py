@@ -1,9 +1,9 @@
-from cmtt.tasks import HinglishToolKit
+from cmkt.tasks import TaskToolKit
 
 sentence = 'Bangladesh and Tripura India ko east side mai hain.'
-mytoolkit = HinglishToolKit()
+mytoolkit = TaskToolKit("hineng")
 
-ner = mytoolkit.XLM_HIEN_NER()
+ner = mytoolkit.ner(model_name="XLM Roberta base")
 
 lst = ner.getNERTags(sentence)
 print(lst)

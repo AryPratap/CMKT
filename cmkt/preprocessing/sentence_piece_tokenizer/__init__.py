@@ -1,7 +1,7 @@
 from readline import set_startup_hook
 from fastai.text import *
-from cmtt.preprocessing.sentence_piece_tokenizer.config import LanguageCodes
-from cmtt.preprocessing.sentence_piece_tokenizer.download_assets import setup_language, verify_tokenizer_model
+from cmkt.preprocessing.sentence_piece_tokenizer.config import LanguageCodes
+from cmkt.preprocessing.sentence_piece_tokenizer.download_assets import setup_language, verify_tokenizer_model
 import sentencepiece as spm
 from pathlib import Path
 from typing import List

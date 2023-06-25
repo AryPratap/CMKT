@@ -1,4 +1,4 @@
-from cmtt.preprocessing import *
+from cmkt.preprocessing import *
 
 
 code_mixed_text = 'tu kesa hai mere bhai, kyuki I am fine. Empowerment toh people chaddange nhi, right?'

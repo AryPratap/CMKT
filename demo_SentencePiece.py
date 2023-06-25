@@ -1,6 +1,6 @@
-from cmtt.preprocessing import *
+from cmkt.preprocessing import *
 
-print("\nCMTT Preprocessing Subpackage Demo (Sentence Piece Tokenizer): ")
+print("\nCMKT Preprocessing Subpackage Demo (Sentence Piece Tokenizer): ")
 print()
 
 # Sentence piece based Tokenizer for English

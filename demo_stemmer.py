@@ -1,5 +1,5 @@
-from cmtt.preprocessing import *
-print("\nCMTT Preprocessing Subpackage Demo (Porter Stemmer): ")
+from cmkt.preprocessing import *
+print("\nCMKT Preprocessing Subpackage Demo (Porter Stemmer): ")
 print()
 
 english_text = "International conference myself happy agreed trying tractable bowled"

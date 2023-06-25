@@ -1,5 +1,5 @@
 from transformers import AutoModelForTokenClassification, AutoTokenizer
-from cmtt.preprocessing import Tokenizers
+from cmkt.preprocessing import Tokenizers
 import torch 
 from pathlib import Path
 import os 

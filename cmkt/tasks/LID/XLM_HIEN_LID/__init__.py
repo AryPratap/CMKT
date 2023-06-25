@@ -1,14 +1,14 @@
 from transformers import AutoModelForTokenClassification, AutoTokenizer
-from cmtt.preprocessing import Tokenizers
+from cmkt.preprocessing import Tokenizers
 import torch 
 from pathlib import Path
 import os 
 
 path = Path(__file__).parent
 
-model_name = "AryPratap/XLM-roberta-HIEN-POS"
+model_name = "AryPratap/XLM-roberta-HIEN-LID"
 
-class XLM_HIEN_POS():
+class XLM_HIEN_LID():
 
     def __init__(self):
 
@@ -25,23 +25,28 @@ class XLM_HIEN_POS():
         self.tokenizer = AutoTokenizer.from_pretrained(dest)
         self.wordTokenizer = Tokenizers('en')
         self.id2label = {
-            "0": "NOUN",
-            "1": "PROPN",
-            "2": "VERB",
-            "3": "ADJ",
-            "4": "ADV",
-            "5": "DET",
-            "6": "ADP",
-            "7": "PRON",
-            "8": "PRON_WH",
-            "9": "PART",
-            "10": "PART_NEG",
-            "11": "NUM",
-            "12": "CONJ",
-            "13": "X"
+            "0": "EN",
+            "1": "HI",
+            "2": "ne",
+            "3": "other",
+            "4": "mixed",
+            "5": "amniguous",
+            "6": "fw",
+            "7": "unk"
         }
 
-    def getPOSTags(self,text):
+        self.label2id = {
+            "EN" : "0",
+            "HI" : "1",
+            "ne" : "2",
+            "other" : "3",
+            "mixed" : "4",
+            "amniguous" : "5",
+            "fw" : "6",
+            "unk" : "7"
+        }
+
+    def getLangTags(self,text):
 
         #tokens1 = ['Aap', 'kaise', 'hai', 'main', 'thik','.','I','am','good','.']
         word_tokens = self.wordTokenizer.word_tokenize(text)
@@ -53,19 +58,30 @@ class XLM_HIEN_POS():
 
         word_ids = tokens.word_ids()
         word_ids = word_ids[1:-1]
-        pos_labels = [predicted_labels[0]]
+        lang_labels = [predicted_labels[0]]
         for i in range(1,len(word_ids)):
             if word_ids[i] != word_ids[i-1]:
-                pos_labels.append(predicted_labels[i])
+                lang_labels.append(predicted_labels[i])
 
-        pos_tags = [self.id2label[str(label)] for label in pos_labels]
+        lang_tags = [self.id2label[str(label)] for label in lang_labels]
 
         return_list = []
         for i in range(len(word_tokens)):
-            return_list.append((word_tokens[i],pos_tags[i]))
+            return_list.append((word_tokens[i],lang_tags[i]))
 
         return return_list
     
+    def getlangIds(self,text):
+
+        langtags = self.getLangTags(text)
+        langtag_list = []
+
+        for i in langtags:
+            langtag_list.append(i[1])
+
+        langIds_list = [self.label2id[str(label)] for label in langtag_list]
+        
+        return langIds_list
 
 
 #model = XLM_Roberta_HIEN()

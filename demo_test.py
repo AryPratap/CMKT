@@ -1,7 +1,7 @@
-from cmtt.tasks import *
-from cmtt.preprocessing import *
-from cmtt.metrics import *
-from cmtt.data import *
+from cmkt.tasks import *
+from cmkt.preprocessing import *
+from cmkt.metrics import *
+from cmkt.data import *
 
 #mytoolkit = HinglishToolKit()
 
@@ -62,4 +62,4 @@ sentence = "RAHUL jab dieting par hota hai toh green tea peeta hai."
 
 # Download cmtt datasets
 print("Download cmtt datasets function")
-lst = download_cmtt_datasets(["mt_hineng_Dhar_LR4NLP2018"])
+lst = download_cmkt_datasets(["mt_hineng_Dhar_LR4NLP2018"])

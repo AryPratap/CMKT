@@ -1,4 +1,4 @@
-from cmtt.metrics import *
+from cmkt.metrics import *
 
 sent = "RAHUL jab dieting par hota hai toh green tea peeta hai."
 metrics = Metrics(language="hineng")
