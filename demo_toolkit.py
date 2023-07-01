@@ -7,6 +7,7 @@ hien_toolkit = TaskToolKit("hineng")
 
 
 # Search tasks available based on task type
+# Available Task types, "syntactic", "semantic", "generational" 
 task_list_hi = hien_toolkit.list_tasks(task_type="syntactic")
 print("Tasks for hinglish toolkit language") 
 print(task_list_hi)

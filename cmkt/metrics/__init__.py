@@ -16,11 +16,11 @@ class Metrics:
 			raise KeyError(f'{name} metrics not found.')
 		
 		mytoolkit = TaskToolKit(self.language)
-		lid = mytoolkit.lid(model_name="XLM Roberta base")
+		lid = mytoolkit.lid(model_name="xlm-roberta-base")
 
 		langTags = lid.getlangIds(sentence)
-		ner = mytoolkit.ner(model_name="XLM Roberta base")
-		nertags = ner.getNERTags(sentence)	
+		ner = mytoolkit.ner(model_name="xlm-roberta-base")
+		nertags = ner.get_predictions(sentence)	
 		for i in range(len(langTags)):
 				if nertags[i][1] != 'O':
 					langTags[i] = '8'

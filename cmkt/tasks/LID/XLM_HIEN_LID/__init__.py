@@ -46,7 +46,7 @@ class XLM_HIEN_LID():
             "unk" : "7"
         }
 
-    def getLangTags(self,text):
+    def get_predictions(self,text):
 
         #tokens1 = ['Aap', 'kaise', 'hai', 'main', 'thik','.','I','am','good','.']
         word_tokens = self.wordTokenizer.word_tokenize(text)
@@ -73,7 +73,7 @@ class XLM_HIEN_LID():
     
     def getlangIds(self,text):
 
-        langtags = self.getLangTags(text)
+        langtags = self.get_predictions(text)
         langtag_list = []
 
         for i in langtags:

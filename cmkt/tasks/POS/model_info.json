@@ -1,7 +1,7 @@
 {
     "model":[
         {
-            "Model name": "XLM Roberta base",
+            "Model name": "xlm-roberta-base",
             "task": "POS",
             "Invoke By": "XLM_HIEN_POS",
             "dataset": "Lince hindi-english POS dataset in roman script",

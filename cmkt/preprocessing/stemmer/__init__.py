@@ -103,11 +103,11 @@ class Stemmer:
         
             hientoolkit = TaskToolKit("hineng")
             
-            lid = hientoolkit.lid(model_name="XLM Roberta base")
+            lid = hientoolkit.lid(model_name="xlm-roberta-base")
             translator = Translator()
             en_stemmer = PorterStemmer()
 
-            tokens_tags_list = lid.getLangTags(text)
+            tokens_tags_list = lid.get_predictions(text)
 
             for i in tokens_tags_list:
                 if(i[1] == 'EN'):

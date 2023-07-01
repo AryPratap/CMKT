@@ -1,5 +1,10 @@
 from cmkt.preprocessing import Tokenizers
-
+'''
+Language convention:
+'en' -> English
+'hi' -> Hindi
+'hineng' -> Hinglish
+'''
 
 ## Tokenizing english Text 
 english_tokenizer = Tokenizers("en")

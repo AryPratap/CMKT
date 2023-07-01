@@ -34,7 +34,7 @@ class XLM_HIEN_NER():
             "6": "I-PERSON"
         }
 
-    def getNERTags(self,text):
+    def get_predictions(self,text):
 
         #tokens1 = ['Aap', 'kaise', 'hai', 'main', 'thik','.','I','am','good','.']
         word_tokens = self.wordTokenizer.word_tokenize(text)

@@ -3,6 +3,13 @@ from cmkt.preprocessing import *
 print("\nCMKT Preprocessing Subpackage Demo (Sentence Piece Tokenizer): ")
 print()
 
+'''
+Language convention:
+'en' -> English
+'hi' -> Hindi
+'hineng' -> Hinglish
+'''
+
 # Sentence piece based Tokenizer for English
 _en = " This is a sentence-piece based tokenizer, supporting the english language."
 Spm_en = SentencepieceTokenizer('en')
@@ -19,13 +26,7 @@ with open(r"test_hi.txt", 'w', encoding = "utf-8") as f:
   for i in lst:
     f.write(i + "\n")
 
-# Sentence piece based Tokenizer for Hinglish
-_hien = " hi kya haal chaal? hum cmtt naamkaran ki python library develop kar rahe hain"
-Spm_hien = SentencepieceTokenizer('hi-enRom')
-lst = Spm_hien.tokenize(_hien)
-with open(r"test_hien.txt", 'w', encoding = "utf-8") as f:
-  for i in lst:
-    f.write(i + "\n")
+
 
 # Sentence piece based Tokenizer for Devnagari Hindi and Roman English Mixed Text
 _hinDev_engRom = " कैसे हो मित्र इनदोनों? Aur batao, I am good."

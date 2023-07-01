@@ -1,7 +1,7 @@
 {
     "model":[
         {
-            "Model name": "XLM Roberta base",
+            "Model name": "xlm-roberta-base",
             "task": "LID",
             "Invoke By": "XLM_HIEN_LID",
             "dataset": "Lince hindi-english dataset in roman script",

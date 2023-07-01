@@ -1,7 +1,7 @@
 {
     "model":[
         {
-            "Model name": "XLM Roberta base",
+            "Model name": "xlm-roberta-base",
             "task": "NER",
             "Invoke By": "XLM_HIEN_NER",
             "dataset": "Lince hindi-english NER dataset in roman script",

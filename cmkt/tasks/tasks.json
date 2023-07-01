@@ -1,19 +1,19 @@
 {
     "tasks":[
         {
-            "task_type": "Syntactic",
+            "task_type": "syntactic",
             "task": "LID",
             "model_info": "LID/model_info.json",
             "language": ["hineng"]
         },
         {
-            "task_type": "Syntactic",
+            "task_type": "syntactic",
             "task": "NER",
             "model_info": "NER/model_info.json",
             "language": ["hineng"]
         },
         {
-            "task_type": "Syntactic",
+            "task_type": "syntactic",
             "task": "POS",
             "model_info": "POS/model_info.json",  
             "language": ["hineng"]          
