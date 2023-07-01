@@ -1,6 +1,6 @@
 from cmkt.tasks import TaskToolKit
 import numpy as np
-
+from cmkt.metrics.scores import *
 
 
 class Metrics:
@@ -103,60 +103,5 @@ class Metrics:
 			burstiness = (sigma_r - mr) / (sigma_r + mr)
 			return burstiness
 		
-def accuracy(reference, test):
-    
 
-    if len(reference) != len(test):
-        raise ValueError("Lists must have the same length.")
-    return sum(x == y for x, y in zip(reference, test)) / len(test)
-
-def precision(reference, test):
-    
-
-    if not hasattr(reference, "intersection") or not hasattr(test, "intersection"):
-        raise TypeError("reference and test should be sets")
-
-    if len(test) == 0:
-        return None
-    else:
-        return len(reference.intersection(test)) / len(test)
-		
-def recall(reference, test):
-    
-    if not hasattr(reference, "intersection") or not hasattr(test, "intersection"):
-        raise TypeError("reference and test should be sets")
-
-    if len(reference) == 0:
-        return None
-    else:
-        return len(reference.intersection(test)) / len(reference)
-    
-
-def f_measure(reference, test, alpha=0.5):
-    
-    p = precision(reference, test)
-    r = recall(reference, test)
-    if p is None or r is None:
-        return None
-    if p == 0 or r == 0:
-        return 0
-    return 1.0 / (alpha / p + (1 - alpha) / r)
-
-def cosine_similarity(x, y):
-    
-    # Ensure length of x and y are the same
-    if len(x) != len(y) :
-        return None
-    
-    # Compute the dot product between x and y
-    dot_product = np.dot(x, y)
-    
-    # Compute the L2 norms (magnitudes) of x and y
-    magnitude_x = np.sqrt(np.sum(x**2)) 
-    magnitude_y = np.sqrt(np.sum(y**2))
-    
-    # Compute the cosine similarity
-    cosine_similarity = dot_product / (magnitude_x * magnitude_y)
-    
-    return cosine_similarity
 

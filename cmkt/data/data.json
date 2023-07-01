@@ -5,7 +5,7 @@
       "language": "hineng",
       "task": "LID",
       "instances": "Train size: 4823  Test Size: 1854  Val Size: 744",
-      "url": "https://drive.google.com/file/d/123HxsTrmZUyuIqJmmwscVL6yb95eHmxi/view?usp=drive_link",
+      "url": "https://drive.google.com/file/d/1q6Isrx9VScIQ1hW69MSMVofu5DQvoAKA/view?usp=sharing",
       "credits": "Language Identification and Analysis of Code-Switched Social Media Text (Mave et al., ACL 2018)",
       "research paper": "https://aclanthology.org/W18-3206/",
       "year": "2018"
@@ -15,7 +15,7 @@
       "language": "hineng",
       "task": "NER",
       "instances": "Train size: 1243  Test Size: 522  Val Size: 314",
-      "url": "https://drive.google.com/file/d/13UZnCJVnTLDHG3uvbfcEV8-Qv1I_n1jq/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1s7Ir1K88C3mtdm3mt8Oc64RdKjPf7mxo/view?usp=sharing",
       "credits": "Language Identification and Named Entity Recognition in Hinglish Code Mixed Tweets (Singh et al., ACL 2018)",
       "research paper": "https://aclanthology.org/P18-3008/",
       "year": "2018"
@@ -35,7 +35,7 @@
       "language": "hineng",
       "task": "POS",
       "instances": "Train size: 1030  Test Size: 299  Val Size: 160",
-      "url": "https://drive.google.com/file/d/1_ezTF6wO31yL9Y8lGEfJDpJFlTzRB4tP/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1PdFeIXOxthXVQUcoIa6Ztv9ho9gTNC9-/view?usp=sharing",
       "credits": "A Twitter Corpus for Hindi-English Code Mixed POS Tagging (Singh et al., SocialNLP 2018)",
       "research paper": "https://aclanthology.org/W18-3503/",
       "year": "2018"
@@ -45,7 +45,7 @@
       "language": "hineng",
       "task": "machine translation",
       "instances": "Examples: 1976",
-      "url": "https://drive.google.com/file/d/1JPTTkbRs5KViQTc0i6MQ9vUy2AOZoGvH/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1ZeUktFqFYke7Bq1UNKZxgmby-3TjI_Eu/view?usp=sharing",
       "credits": "HinGE: A Dataset for Generation and Evaluation of Code-Mixed Hinglish Text(srivastava2021hinge)",
       "research paper": "https://arxiv.org/abs/2107.03760",
       "year": "2021"
@@ -55,7 +55,7 @@
       "language": "hineng",
       "task": "machine translation",
       "instances": "Train size: 8060  Test Size: 960  Val Size: 942",
-      "url": "https://drive.google.com/file/d/1hbTuIXJOi0Lqrudu343RLXFDmk7L2viQ/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1bUnKPwb5rhlh-ua6GV-waIMNcI6KeqG_/view?usp=sharing",
       "credits": "Can be found on lince benchmark",
       "research paper": "https://ritual.uh.edu/lince/datasets",
       "year": "####"
@@ -75,7 +75,7 @@
       "language": "hineng",
       "task": "sarcasm detection",
       "instances": "Examples: 5250",
-      "url": "https://drive.google.com/file/d/1Rvb0XfRAbTgvf-MJUmuwEdggA25X59mz/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/143YZypqGCOF9NF1eZxeYB2RlPSIcoauU/view?usp=sharing",
       "credits": "A Corpus of English-Hindi Code-Mixed Tweets for Sarcasm Detection (swami2018corpus)",
       "research paper": "https://arxiv.org/abs/1805.11869",
       "year": "2018"
@@ -85,7 +85,7 @@
       "language": "hineng",
       "task": "sentiment analysis",
       "instances": "Examples: 3879",
-      "url": "https://drive.google.com/file/d/1WWykrAGsdOpZxfq5Non1zviUrMr6i6c-/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1G32TqTN8e3i6RBTszGA8pSMnLwWldTCg/view?usp=sharing",
       "credits": "Towards Sub-Word Level Compositions for Sentiment Analysis of Hindi-English Code Mixed Text (Joshi et al., COLING 2016)",
       "research paper": "https://aclanthology.org/C16-1234/",
       "year": "2016"
@@ -95,7 +95,7 @@
       "language": "hineng",
       "task": "sentiment analysis",
       "instances": "Examples: 7663",
-      "url": "https://drive.google.com/file/d/1qFe2EzDKtrhLehHrQmIK0dex_-z4jnQf/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1sj0yVdkk_OPbX0tJthGi8y-ds96VyZgT/view?usp=sharing",
       "credits": "Vrishank Shete, GaganDeep Chhabra Singh, and Lokesh Mittal. 2016. Sentiment analysis on Hindi-English code mixed data using SVM",
       "research paper": "https://github.com/vrishankshete/Sentiment-Analysis/tree/master",
       "year": "2016"
@@ -105,7 +105,7 @@
       "language": "hineng",
       "task": "humor detection",
       "instances": "Examples: 7468",
-      "url": "https://drive.google.com/file/d/1Yl7JLHfnWAoNOGq8jS8Qf21mSs56lghO/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1Y1k1X8IuVDfOzIWCdVz2s2lkoGamGhdk/view?usp=sharing",
       "credits": "Ankush Khandelwal. 2018. Humor detection corpus.",
       "research paper": "https://github.com/Ankh2295/humor-detection-corpus/tree/master",
       "year": "2018"
@@ -115,7 +115,7 @@
       "language": "hineng",
       "task": "sentiment analysis",
       "instances": "Train: 14k Dev: 3k",
-      "url": "https://drive.google.com/file/d/1yaZwycTidCSjV9_VTFe63UEpcy2MfyWp/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1c7XQ6_t8aa_ETODz_iP_ztfxCvSjgRyM/view?usp=sharing",
       "credits": "SemEval-2020 Task 9: Overview of Sentiment Analysis of Code-Mixed Tweets (Patwa et al., SemEval 2020)",
       "research paper": "https://aclanthology.org/2020.semeval-1.100/",
       "year": "2020"
@@ -125,9 +125,29 @@
       "language": "hineng",
       "task": "machine translation",
       "instances": "Examples: 6096",
-      "url": "https://drive.google.com/file/d/1gln-aigCIGQOKZAKbO6cbBxIGPYze-nK/view?usp=sharing",
+      "url": "https://drive.google.com/file/d/1xkwkQdWI6a-NmWOWL4nt2qYGP2EQQ7z5/view?usp=sharing",
       "credits": "Enabling Code-Mixed Translation: Parallel Corpus Creation and MT Augmentation Approach (Dhar et al., LR4NLP 2018)",
       "research paper": "https://aclanthology.org/W18-3817/",
+      "year": "2018"
+    },
+    {
+      "name": "irony_hineng_Vijay_EMSASW2018",
+      "language": "hineng",
+      "task": "irony detection",
+      "instances": "Examples: 3095",
+      "url": "https://drive.google.com/file/d/1opWQznLroGC0Jxr5gyNMzhX5teJHQ6VB/view?usp=sharing",
+      "credits": "A Dataset for Detecting Irony in Hindi-English Code-Mixed Social Media Text (Vijay et al, EMSASW 2018)",
+      "research paper": "https://ceur-ws.org/Vol-2111/paper5.pdf",
+      "year": "2018"
+    },
+    {
+      "name": "hatespeech_hineng_Bohra_PEOPLES2018",
+      "language": "hineng",
+      "task": "hate speech detection",
+      "instances": "Examples: 4113",
+      "url": "https://drive.google.com/file/d/1UOMbKuDspMjCDu4cL5HCZIU2N_xBOYSe/view?usp=sharing",
+      "credits": "A Dataset of Hindi-English Code-Mixed Social Media Text for Hate Speech Detection (Bohra et al., PEOPLES 2018)",
+      "research paper": "https://aclanthology.org/W18-1105/",
       "year": "2018"
     }
 

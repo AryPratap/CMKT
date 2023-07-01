@@ -3,63 +3,109 @@ from cmkt.preprocessing import *
 from cmkt.metrics import *
 from cmkt.data import *
 
-#mytoolkit = HinglishToolKit()
 
-'''
-code_mixed_text = 'tu kesa hai mere bhai, kyuki I am fine. Empowerment toh people chaddange nhi, right?'
-hien_stemmed = hien_stemmer(code_mixed_text)
-hiennn = ' '.join(hien_stemmed)
-print(hien_stemmed)
-with open(r"test_hien_stemmed.txt", 'w', encoding = "utf-8") as f:
-  f.write(hiennn + "\n")
-'''
 
-sentence = "Deepak ji, channel ko kitna fund diya hai congress ne? 2006 me ameithi rape case kyu nahi discuss kiya kabhi?"
+#sentence = "Deepak ji, channel ko kitna fund diya hai congress ne? 2006 me ameithi rape case kyu nahi discuss kiya kabhi?"
 sentence = "RAHUL jab dieting par hota hai toh green tea peeta hai."
 #sentence = "Deepak ji, channel ko kitna fund diya hai congress ne? 2006 me ameithi rape case kyu nahi discuss kiya kabhi?"
 #sentence = "4 din me 2 accidents, kuch to jhol hai, shayad politics ho rahi hai.."
-#sentence = "The ultimate twist Dulhan dandanate huye brings Baraat .... Dulha"
-#sentence = "laufed ... first u hav to correct ur english baad me sochna use !!!"
-#lid = mytoolkit.XLM_HIEN_LID()
-#print(lid.getLangTags(sentence))
+sentence = "The ultimate twist Dulhan dandanate huye brings Baraat .... Dulha"
+sentence = "laufed ... first u hav to correct ur english baad me sochna use !!!"
+sentence = "@Mariam_Jamali Nice one but logo filhal KK ki jaga Pakistan ka lagwa do. Pic is good"
 
-#ner = mytoolkit.XLM_HIEN_NER()
-#print(ner.getNERTags(sentence))
-#print(burstiness(sentence))
-
-
-
-#ner = mytoolkit.XLM_HIEN_NER()
-
-#pos = mytoolkit.XLM_HIEN_POS()
-#print(pos.getPOSTags("Aap kaise hai main thik. I am good. My name is Ramesh"))
-
-# List CMTT datasets for the task of LID
-# print("List CMTT Datasets Function (search_key = task, search_term = ner): ")
-# data = ListDatasets(search_key="task", search_term = "ner", isPrint=True,details=True)
-# print()
-# # List CMTT datasets for hineng language
-# print("List CMTT Datasets Function (search_key = language, search_term = hineng): ")
-# data1 = ListDatasets(search_key="language", search_term = "hineng", isPrint=True, details=True)
-# mytoolkit = TaskToolKit(lang="hineng")
-# lid = mytoolkit.lid(model_name="XLM ")
-
-# print(lid.getLangTags(sentence))
-
-
-# tokenizer = Tokenizers("en")
-
-
-# print(tokenizer.word_tokenize(sentence))
-
-# stemmer = Stemmer('hineng')
-# hindi_text = "ख़रीदारों के लिए मार्ग दर्शिका"
-# hindi_stemmed = stemmer.stem(hindi_text)
-# print(hindi_stemmed)
-# mytoolkit = TaskToolKit("hineng")
-# ner = mytoolkit.ner(model_name="XLM Roberta base")
-# lst = ner.getNERTags("stupid move, considering their aging population and lack of a manual labor force.")
 
 # Download cmtt datasets
-print("Download cmtt datasets function")
-lst = download_cmkt_datasets(["mt_hineng_Dhar_LR4NLP2018"])
+#print("Download cmtt datasets function")
+'''lst = download_cmkt_datasets(["mt_hineng_Dhar_LR4NLP2018",
+                              "lid_hineng_Mave_ACL2018",
+                              "ner_hineng_Singh_ACL2018",
+                              "ner_hineng_Singh_NEWS2018",
+                              "pos_hineng_Singh_SocialNLP2018",
+                              "mt_hineng_Srivastava_2021hinge",
+                              "mt_hineng_lince",
+                              "mt_hineng_Srivastava_WNUT2020",
+                              "sarcasm_hineng_Swami_2018corpus",
+                              "sentiment_hineng_Joshi_COLING2016",
+                              "sentiment_hineng_Shete_2016",
+                              "humor_hineng_Ankush_2018",
+                              "sentiment_hineng_Patwa_SemEval2020",
+                              "irony_hineng_Vijay_EMSASW2018",
+                              "hatespeech_hineng_Bohra_PEOPLES2018"])'''
+
+
+mytoolkit = TaskToolKit('hineng')
+lid = mytoolkit.lid(model_name="XLM Roberta base")
+
+langTags = lid.getlangIds(sentence)
+ner = mytoolkit.ner(model_name="XLM Roberta base")
+nertags = ner.getNERTags(sentence)	
+for i in range(len(langTags)):
+		if nertags[i][1] != 'O':
+			langTags[i] = '8'
+			
+print("Predicted langTags")
+print(lid.getLangTags(sentence))
+print()
+
+print("After formating")
+print(langTags)
+langTags = ['3','3','0','0','0','0','1','3','1','1','3','1','1','1','3','0','0','0']
+#langTags = ['0', '3', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '3']
+#langTags = ['0', '0', '0', '1', '1', '1', '0', '1', '3', '1']
+#langTags = ['8', '1', '3', '0', '1', '1', '0', '1', '1', '8', '1', '3', '3', '1', '8', '0', '0', '1', '1', '0', '1', '1', '3']
+# print("Total Tokens: ", len(langTags))
+# print()
+# lang1_words = 0
+# for i in langTags:
+# 	if i == '0':
+# 		lang1_words = lang1_words + 1
+# print("EN tokens: ", lang1_words)
+# print()
+# lang2_words = 0
+# for i in langTags:
+# 	if i == '1':
+# 		lang2_words = lang2_words + 1
+# print("HI tokens: ", lang2_words)
+# print()	
+# max_count = max(lang1_words,lang2_words)
+
+# # total tokens 
+# n = len(langTags)
+# # language independent tokens
+# u = len(langTags) - lang1_words - lang2_words
+
+# if n>u:
+# 	print("CMI: ", 100*(1 - (max_count/(n-u))))
+# else:
+# 	print("CMI: ", 0)
+       
+lang1_words = 0
+for i in langTags:
+	if i == '0':
+		lang1_words = lang1_words + 1
+				
+lang2_words = 0
+for i in langTags:
+	if i == '1':
+		lang2_words = lang2_words + 1
+		
+# total number of words 
+n = len(langTags)
+# total languages 
+k = 3
+
+			# language independent words
+lang3_words = n - lang1_words - lang2_words
+if lang3_words == 0:
+	k = 2
+		
+sigma_pj = (lang1_words/n)**2 + (lang2_words/n)**2 + (lang3_words/n)**2 
+
+print("M-INDEX: ", (1- sigma_pj)/((k-1)*sigma_pj)) 
+
+S = 0
+
+for i in range(len(langTags)-1):
+	if langTags[i]!=langTags[i+1]:
+		S = S+1
+print("I-Index:",S/(len(langTags)-1)) 

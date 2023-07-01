@@ -52,6 +52,7 @@ setup(
     "googletrans",
     "tabulate==0.9.0"
     "transformers==4.29.1",
-    "nltk"
+    "nltk",
+    "rouge_score"
   ]
 )

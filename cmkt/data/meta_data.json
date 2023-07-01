@@ -1,8 +1,8 @@
 {
     "datasets": [
       {
-        "url":"https://drive.google.com/file/d/123HxsTrmZUyuIqJmmwscVL6yb95eHmxi/view?usp=drive_link",
-        "id": "123HxsTrmZUyuIqJmmwscVL6yb95eHmxi",
+        "url":"https://drive.google.com/file/d/1q6Isrx9VScIQ1hW69MSMVofu5DQvoAKA/view?usp=sharing",
+        "id": "1q6Isrx9VScIQ1hW69MSMVofu5DQvoAKA",
         "name":"lid_hineng_Mave_ACL2018",
         "format":"zip",
         "language":"hineng",
@@ -12,8 +12,8 @@
         "year": "2018"
       },
       {
-        "url":"https://drive.google.com/file/d/13UZnCJVnTLDHG3uvbfcEV8-Qv1I_n1jq/view?usp=sharing",
-        "id": "13UZnCJVnTLDHG3uvbfcEV8-Qv1I_n1jq",
+        "url":"https://drive.google.com/file/d/1s7Ir1K88C3mtdm3mt8Oc64RdKjPf7mxo/view?usp=sharing",
+        "id": "1s7Ir1K88C3mtdm3mt8Oc64RdKjPf7mxo",
         "name":"ner_hineng_Singh_ACL2018",
         "format":"zip",
         "language":"hineng",
@@ -34,8 +34,8 @@
         "year": "2018"
       },
       {
-        "url": "https://drive.google.com/file/d/1_ezTF6wO31yL9Y8lGEfJDpJFlTzRB4tP/view?usp=sharing",
-        "id": "1_ezTF6wO31yL9Y8lGEfJDpJFlTzRB4tP",
+        "url": "https://drive.google.com/file/d/1PdFeIXOxthXVQUcoIa6Ztv9ho9gTNC9-/view?usp=sharing",
+        "id": "1PdFeIXOxthXVQUcoIa6Ztv9ho9gTNC9-",
         "name": "pos_hineng_Singh_SocialNLP2018",
         "format": "zip",
         "language": "hineng",
@@ -45,8 +45,8 @@
         "year": "2018"
       },
       {
-        "url": "https://drive.google.com/file/d/1JPTTkbRs5KViQTc0i6MQ9vUy2AOZoGvH/view?usp=sharing",
-        "id": "1JPTTkbRs5KViQTc0i6MQ9vUy2AOZoGvH",
+        "url": "https://drive.google.com/file/d/1ZeUktFqFYke7Bq1UNKZxgmby-3TjI_Eu/view?usp=sharing",
+        "id": "1ZeUktFqFYke7Bq1UNKZxgmby-3TjI_Eu",
         "name": "mt_hineng_Srivastava_2021hinge",
         "format": "zip",
         "language": "hineng",
@@ -56,8 +56,8 @@
         "year": "2021"
       },
       {
-        "url": "https://drive.google.com/file/d/1hbTuIXJOi0Lqrudu343RLXFDmk7L2viQ/view?usp=sharing",
-        "id": "1hbTuIXJOi0Lqrudu343RLXFDmk7L2viQ",
+        "url": "https://drive.google.com/file/d/1bUnKPwb5rhlh-ua6GV-waIMNcI6KeqG_/view?usp=sharing",
+        "id": "1bUnKPwb5rhlh-ua6GV-waIMNcI6KeqG_",
         "name": "mt_hineng_lince",
         "format": "zip",
         "language": "hineng",
@@ -78,8 +78,8 @@
         "year": "2020"
       },
       {
-        "url": "https://drive.google.com/file/d/1Rvb0XfRAbTgvf-MJUmuwEdggA25X59mz/view?usp=sharing",
-        "id": "1Rvb0XfRAbTgvf-MJUmuwEdggA25X59mz",
+        "url": "https://drive.google.com/file/d/143YZypqGCOF9NF1eZxeYB2RlPSIcoauU/view?usp=sharing",
+        "id": "143YZypqGCOF9NF1eZxeYB2RlPSIcoauU",
         "name": "sarcasm_hineng_Swami_2018corpus",
         "format": "zip",
         "language": "hineng",
@@ -89,8 +89,8 @@
         "year": "2018"
       },
       {
-        "url": "https://drive.google.com/file/d/1WWykrAGsdOpZxfq5Non1zviUrMr6i6c-/view?usp=sharing",
-        "id": "1WWykrAGsdOpZxfq5Non1zviUrMr6i6c-",
+        "url": "https://drive.google.com/file/d/1G32TqTN8e3i6RBTszGA8pSMnLwWldTCg/view?usp=sharing",
+        "id": "1G32TqTN8e3i6RBTszGA8pSMnLwWldTCg",
         "name": "sentiment_hineng_Joshi_COLING2016",
         "format": "zip",
         "language": "hineng",
@@ -100,8 +100,8 @@
         "year": "2016"
       },
       {
-        "url": "https://drive.google.com/file/d/1qFe2EzDKtrhLehHrQmIK0dex_-z4jnQf/view?usp=sharing",
-        "id": "1qFe2EzDKtrhLehHrQmIK0dex_-z4jnQf",
+        "url": "https://drive.google.com/file/d/1sj0yVdkk_OPbX0tJthGi8y-ds96VyZgT/view?usp=sharing",
+        "id": "1sj0yVdkk_OPbX0tJthGi8y-ds96VyZgT",
         "name": "sentiment_hineng_Shete_2016",
         "format": "zip",
         "language": "hineng",
@@ -111,8 +111,8 @@
         "year": "2016"
       },
       {
-        "url": "https://drive.google.com/file/d/1Yl7JLHfnWAoNOGq8jS8Qf21mSs56lghO/view?usp=sharing",
-        "id": "1Yl7JLHfnWAoNOGq8jS8Qf21mSs56lghO",
+        "url": "https://drive.google.com/file/d/1Y1k1X8IuVDfOzIWCdVz2s2lkoGamGhdk/view?usp=sharing",
+        "id": "1Y1k1X8IuVDfOzIWCdVz2s2lkoGamGhdk",
         "name": "humor_hineng_Ankush_2018",
         "format": "zip",
         "language": "hineng",
@@ -122,8 +122,8 @@
         "year": "2018"
       },
       {
-        "url": "https://drive.google.com/file/d/1yaZwycTidCSjV9_VTFe63UEpcy2MfyWp/view?usp=sharing",
-        "id": "1yaZwycTidCSjV9_VTFe63UEpcy2MfyWp",
+        "url": "https://drive.google.com/file/d/1c7XQ6_t8aa_ETODz_iP_ztfxCvSjgRyM/view?usp=sharing",
+        "id": "1c7XQ6_t8aa_ETODz_iP_ztfxCvSjgRyM",
         "name": "sentiment_hineng_Patwa_SemEval2020",
         "format": "zip",
         "language": "hineng",
@@ -133,13 +133,35 @@
         "year": "2020"
       },
       {
-        "url": "https://drive.google.com/file/d/1gln-aigCIGQOKZAKbO6cbBxIGPYze-nK/view?usp=sharing",
-        "id": "1gln-aigCIGQOKZAKbO6cbBxIGPYze-nK",
+        "url": "https://drive.google.com/file/d/1xkwkQdWI6a-NmWOWL4nt2qYGP2EQQ7z5/view?usp=sharing",
+        "id": "1xkwkQdWI6a-NmWOWL4nt2qYGP2EQQ7z5",
         "name": "mt_hineng_Dhar_LR4NLP2018",
         "format": "zip",
         "language": "hineng",
         "task": "machine translation",
         "credits": "Enabling Code-Mixed Translation: Parallel Corpus Creation and MT Augmentation Approach (Dhar et al., LR4NLP 2018)",
+        "source": "gdrive",
+        "year": "2018"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1opWQznLroGC0Jxr5gyNMzhX5teJHQ6VB/view?usp=sharing",
+        "id": "1opWQznLroGC0Jxr5gyNMzhX5teJHQ6VB",
+        "name": "irony_hineng_Vijay_EMSASW2018",
+        "format":"zip",
+        "language": "hineng",
+        "task": "irony detection",
+        "credits": "A Dataset for Detecting Irony in Hindi-English Code-Mixed Social Media Text (Vijay et al, EMSASW 2018)",
+        "source": "gdrive",
+        "year": "2018"
+      },
+      {
+        "url": "https://drive.google.com/file/d/1UOMbKuDspMjCDu4cL5HCZIU2N_xBOYSe/view?usp=sharing",
+        "id": "1UOMbKuDspMjCDu4cL5HCZIU2N_xBOYSe",
+        "name": "hatespeech_hineng_Bohra_PEOPLES2018",
+        "format":"zip",
+        "language": "hineng",
+        "task": "hate speech detection",
+        "credits": "A Dataset of Hindi-English Code-Mixed Social Media Text for Hate Speech Detection (Bohra et al., PEOPLES 2018)",
         "source": "gdrive",
         "year": "2018"
       }
