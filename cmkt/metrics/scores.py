@@ -44,18 +44,14 @@ def f_measure(reference, test, alpha=0.5):
 
 def cosine_similarity(x, y):
     
-    # Ensure length of x and y are the same
     if len(x) != len(y) :
         return None
     
-    # Compute the dot product between x and y
     dot_product = np.dot(x, y)
-    
-    # Compute the L2 norms (magnitudes) of x and y
+
     magnitude_x = np.sqrt(np.sum(x**2)) 
     magnitude_y = np.sqrt(np.sum(y**2))
     
-    # Compute the cosine similarity
     cosine_similarity = dot_product / (magnitude_x * magnitude_y)
     
     return cosine_similarity
@@ -76,9 +72,6 @@ def blue_score(predictions, references, max_order=4, smooth=False):
 
 def rouge_score(predictions, references, rouge_types=None, use_aggregator=True, use_stemmer=False):
     """
-    ROUGE, or Recall-Oriented Understudy for Gisting Evaluation, is a set of metrics and a software package used for
-    evaluating automatic summarization and machine translation software in natural language processing.
-
     CMKT uses the implementation of rouge score from Google Research reimplementation of ROUGE, and the huggingface datasets library.
     """
     if rouge_types is None:

@@ -3,9 +3,6 @@ CMKT uses the implementation of Tensorflow nmt blue score.
 # From: https://github.com/tensorflow/nmt/blob/master/nmt/scripts/bleu.py
 
 This module provides a Python implementation of BLEU and smooth-BLEU.
-Smooth BLEU is computed following the method outlined in the paper:
-Chin-Yew Lin, Franz Josef Och. ORANGE: a method for evaluating automatic
-evaluation metrics for machine translation. COLING 2004.
 """
 
 

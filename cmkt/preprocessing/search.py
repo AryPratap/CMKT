@@ -1,4 +1,4 @@
-from cmkt.preprocessing.tokenizer import WordTokenizer
+from cmkt.preprocessing.tokenizer import Tokenizers
 
 def search_word(corpus, word, tokenize = False, width = 10):
   """
@@ -16,12 +16,12 @@ def search_word(corpus, word, tokenize = False, width = 10):
   """
 
   if(tokenize):
-    WordT = WordTokenizer()
+    WordT = Tokenizers('en')
     if(type(corpus) == list):
       corpus = ' '.join(corpus)
-      corpus = WordT.tokenize(corpus)
+      corpus = WordT.word_tokenize(corpus)
     else:
-      corpus = WordT.tokenize(corpus)
+      corpus = WordT.word_tokenize(corpus)
 
   instances = 0
   list_instances = []
