@@ -47,9 +47,29 @@ blue = blue_score(predictions=predictions, references=references)
 print("Blue Score: ", blue)
 print()
 
-# # Rouge Score
+# Rouge Score
 
-# predictions = ["I really loved reading hunder games"]
-# references = ["I loved reading the hunger games"]
-# rouge = rouge_score(predictions=predictions, references=references)
-# print(rouge)
+predictions = ["I really loved reading hunder games"]
+references = ["I loved reading the hunger games"]
+rouge = rouge_score(predictions=predictions, references=references)
+print("Rouge Score: ",rouge)
+print()
+
+#Spearman Score
+spearmanr_metric = spearman_score(references=[1, 2, 3, 4, 5], predictions=[10, 9, 2.5, 6, 4])
+print("Spearman Score: ", spearmanr_metric)
+print()
+
+#pearson score 
+
+results = pearson_score(predictions=[10, 9, 2.5, 6, 4], references=[1, 2, 3, 4, 5], return_pvalue=True)
+print(sorted(list(results.keys())))
+print(round(results['pearsonr'], 2))
+print(round(results['p-value'], 2))
+
+
+# bert score 
+predictions = ["hello world", "general kenobi"]
+references = ["goodnight moon", "the sun is shining"]
+results = bert_score(predictions=predictions, references=references, model_type="distilbert-base-uncased")
+print(results)

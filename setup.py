@@ -53,6 +53,7 @@ setup(
     "tabulate==0.9.0"
     "transformers==4.29.1",
     "nltk",
-    "rouge_score"
+    "rouge_score",
+    "datasets==2.14.0"
   ]
 )

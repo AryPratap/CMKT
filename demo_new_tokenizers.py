@@ -39,7 +39,7 @@ print()
 ## Tokenizing Roman Devanagari mixed script text 
 mixed_tokenizer = Tokenizers("hineng")
 
-mix_sent = "I think you have not prepared well. आज मैंने अपना खाना बनाया॥ आप कैसे कै.कै हैं:? I got 9.6 GPA. Understood?  "
+mix_sent = "Today I cooked my food. आज मैंने अपना खाना बनाया॥ अतः सुखी रहा॥ Are you fine?"
 
 # Sentence tokenization 
 print("Roman-Devanagari Mixed Sentence Tokenizer")

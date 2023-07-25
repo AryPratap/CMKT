@@ -14,7 +14,7 @@ print(task_list_hi)
 print()
 
 # List model information based on task 
-model_ner = hien_toolkit.task_model_info(task="ner", details=True)
+model_ner = hien_toolkit.task_model_info(task="ner", details=False)
 print("models for ner task")
 print(model_ner)
 print()

@@ -4,7 +4,7 @@ mytoolkit = TaskToolKit("hineng")
 
 
 lid = mytoolkit.lid(model_name="xlm-roberta-base")
-sentence = 'tu kesa hai mere bhai, kyuki I am fine. Empowerment toh people choddega nhi, right?'
+sentence = 'kyuki I am fine bhai'
 
 lst = lid.get_predictions(sentence)
 print(lst)

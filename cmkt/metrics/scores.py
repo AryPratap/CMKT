@@ -2,6 +2,8 @@ import numpy as np
 from cmkt.metrics.blue_score import compute_bleu
 from rouge_score import rouge_scorer, scoring
 from scipy.stats import spearmanr
+from scipy.stats import pearsonr
+from datasets import load_metric
 
 def accuracy(reference, test):
     """
@@ -132,9 +134,6 @@ def blue_score(predictions, references, max_order=4, smooth=False):
         """
         BLEU (bilingual evaluation understudy) is an algorithm for evaluating the quality of text 
         which has been machine-translated from one natural language to another.
-        Scores are calculated for individual translated segments—generally sentences—by comparing them with a set of good quality reference translations.
-        Those scores are then averaged over the whole corpus to reach an estimate of the translation's overall quality. Intelligibility or grammatical correctness
-        are not taken into account. 
         Refer blue_score.py for more information. 
         Args:
             :type predictions: list
@@ -168,9 +167,31 @@ def blue_score(predictions, references, max_order=4, smooth=False):
             "reference_length": reference_length,
         }
 
-def rouge_score(predictions, references, rouge_types=None, use_aggregator=True, use_stemmer=False):
+def rouge_score(predictions, references, rouge_types=None, use_aggregator=False, use_stemmer=False):
     """
     CMKT uses the implementation of rouge score from Google Research reimplementation of ROUGE, and the huggingface datasets library.
+    For more information visit:
+    https://github.com/huggingface/datasets/blob/main/metrics/rouge/rouge.py
+
+    Args:
+        predictions: A list of predictions to be scored. Each prediction
+        should be a string with tokens separated by spaces.
+        references: A list of references for each prediction. Each
+        reference should be a string with tokens separated by spaces.
+        rouge_types: A list of Rouge types to calculate. Valid names include:
+        - "rouge{n}" (e.g., "rouge1", "rouge2") for n-gram based scoring.
+        - "rougeL" for Longest Common Subsequence (LCS) based scoring.
+        - "rougeLSum" for LCS-based scoring with text splitting using "\n".
+        use_stemmer: A boolean indicating whether to use Porter stemmer for word suffix stripping.
+        use_aggregator: A boolean indicating whether to return aggregates if set to True.
+
+    Returns:
+        rouge1: Rouge-1 scores (precision, recall, f1).
+        rouge2: Rouge-2 scores (precision, recall, f1).
+        rougeL: Rouge-L scores (precision, recall, f1).
+        rougeLsum: Rouge-Lsum scores (precision, recall, f1).
+
+
     """
     if rouge_types is None:
             rouge_types = ["rouge1", "rouge2", "rougeL", "rougeLsum"]
@@ -198,12 +219,88 @@ def rouge_score(predictions, references, rouge_types=None, use_aggregator=True, 
     return result
 
 def spearman_score(predictions, references, return_pvalue=False):
+    """
+    The Spearman rank-order correlation coefficient quantifies the association between two sets of data based on their ranks.
+    Args:
+        :type predictions: List
+        :param predictions: Labels predicted by the model.
+        :type references: List
+        :param references: Ground Truth Labels.
+        :type return_pvalue: bool
+        :param return_pvalue: If set True, the p_value will also be returned along with spearman score. 
+    Returns:
+        Returns the spearman score along with p_value(if set return_pvalue set True).
+        :rtype: float
+    """
     results = spearmanr(references, predictions)
     if return_pvalue:
         return {"spearmanr": results[0], "spearmanr_pvalue": results[1]}
     else:
         return {"spearmanr": results[0]}
+
+
+def pearson_score(predictions, references, return_pvalue=False):
+        """
+        The Spearman rank-order correlation coefficient quantifies the association between two sets of data based on their ranks.
+        Args:
+            :type predictions: List
+            :param predictions: Labels predicted by the model.
+            :type references: List
+            :param references: Ground Truth Labels.
+            :type return_pvalue: bool
+            :param return_pvalue: If set True, the p_value will also be returned along with spearman score. 
+        Returns:
+            Returns the pearson score along with p_value(if set return_pvalue set True).
+            :rtype: float
+        """
+        if return_pvalue:
+            results = pearsonr(references, predictions)
+            return {"pearsonr": results[0], "p-value": results[1]}
+        else:
+            return {"pearsonr": float(pearsonr(references, predictions)[0])}
     
+def bert_score(predictions,
+    references,
+    lang=None,
+    model_type=None,
+    num_layers=None,
+    verbose=False,
+    idf=False,
+    device=None,
+    batch_size=64,
+    nthreads=4,
+    all_layers=False,
+    rescale_with_baseline=False,
+    baseline_path=None,
+    use_fast_tokenizer=False):
+    """
+    BERTScore uses pre-trained contextual embeddings from BERT to match words in candidate and reference sentences using cosine similarity.
+    It correlates well with human judgment for sentence-level and system-level evaluation and provides precision, 
+    recall, and F1 measures for assessing language generation tasks.
+    CMKT uses the huggingface's datasets library based implementation for bert score 
+    for information refer 
+    https://github.com/Tiiiger/bert_score#readme 
+    https://github.com/huggingface/datasets/tree/main/metrics/bertscore
+    """
+
+    bertscore = load_metric("bertscore")
+    results = bertscore.compute(predictions=predictions, 
+                                references=references, lang=lang,
+                                model_type=model_type,
+                                num_layers=num_layers,
+                                verbose=verbose,
+                                idf=idf,
+                                device=device,
+                                batch_size=batch_size,
+                                nthreads=nthreads,
+                                all_layers= all_layers,
+                                rescale_with_baseline=rescale_with_baseline,
+                                baseline_path=baseline_path,
+                                use_fast_tokenizer= use_fast_tokenizer)
+
+    return results
+    
+
 
     
 
