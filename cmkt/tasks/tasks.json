@@ -17,6 +17,12 @@
             "task": "POS",
             "model_info": "POS/model_info.json",  
             "language": ["hineng"]          
+        },
+        {
+            "task_type": "semantic",
+            "task": "sentiment analysis",
+            "model_info": "sentiment/model_info.json",  
+            "language": ["hineng"]          
         }
         
     ]

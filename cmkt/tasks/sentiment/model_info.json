@@ -1,0 +1,13 @@
+{
+    "model":[
+        {
+            "Model name": "xlm-roberta-base",
+            "task": "sentiment analysis",
+            "Invoke By": "XLM_HIEN_SENT",
+            "dataset": "PHINC Hindi-English code-mixed Machine translation dataset by Srivastava and Singh",
+            "Test Accuracy": "63.26%",
+            "Train/Val/Test Examples": "14k/3k",
+            "language": "hineng"
+        }            
+    ]
+}
