@@ -1,0 +1,13 @@
+{
+    "model":[
+        {
+            "Model name": "xlm-roberta-base",
+            "task": "hate speech detection",
+            "Invoke By": "XLM_HIEN_HATE",
+            "dataset": "A Dataset of Hindi-English Code-Mixed Social Media Text for Hate Speech Detection (Bohra et al., PEOPLES 2018)",
+            "Test Accuracy": "70.74%",
+            "Train/Val/Test Examples": "3662/916",
+            "language": "hineng"
+        }            
+    ]
+}

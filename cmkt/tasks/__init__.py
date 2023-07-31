@@ -7,6 +7,8 @@ from cmkt.tasks.LID import *
 from cmkt.tasks.NER import *
 from cmkt.tasks.POS import *
 from cmkt.tasks.sentiment import *
+from cmkt.tasks.hatespeech import *
+from cmkt.tasks.humor import *
 import os 
 import json
 from tabulate import tabulate
@@ -161,6 +163,39 @@ class TaskToolKit:
                 print(f"{model_name} model not found for LID in {self.lang} language")
                 return                                                
         return model
+    
+    def hatespeech(self, model_name: str):
+        model_info = self.model_info_file("hate speech detection")
+        if model_info == None:
+            print(f"Task not available for {self.lang} language")
+            return
+        
+        for models in model_info:
+            if model_name.lower() in models["Model name"].lower() and self.lang in models['language']:
+                model_class = globals()[models['Invoke By']] # type: ignore
+                model = model_class()
+                break
+            else:
+                print(f"{model_name} model not found for LID in {self.lang} language")
+                return                                                
+        return model
+    
+    def humordetection(self, model_name: str):
+        model_info = self.model_info_file("humor detection")
+        if model_info == None:
+            print(f"Task not available for {self.lang} language")
+            return
+        
+        for models in model_info:
+            if model_name.lower() in models["Model name"].lower() and self.lang in models['language']:
+                model_class = globals()[models['Invoke By']] # type: ignore
+                model = model_class()
+                break
+            else:
+                print(f"{model_name} model not found for LID in {self.lang} language")
+                return                                                
+        return model
+
         
 
 

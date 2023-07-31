@@ -23,6 +23,18 @@
             "task": "sentiment analysis",
             "model_info": "sentiment/model_info.json",  
             "language": ["hineng"]          
+        },
+        {
+            "task_type": "semantic",
+            "task": "hate speech detection",
+            "model_info": "hatespeech/model_info.json",  
+            "language": ["hineng"]          
+        },
+        {
+            "task_type": "semantic",
+            "task": "humor detection",
+            "model_info": "humor/model_info.json",  
+            "language": ["hineng"]          
         }
         
     ]

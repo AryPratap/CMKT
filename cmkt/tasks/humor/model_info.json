@@ -1,0 +1,13 @@
+{
+    "model":[
+        {
+            "Model name": "xlm-roberta-base",
+            "task": "humor detection",
+            "Invoke By": "XLM_HIEN_HUMOR",
+            "dataset": "Humor Detection in English-Hindi Code-Mixed Social Media Content(Khandelwal et al., LREC 2018)",
+            "Test Accuracy": "70.71%",
+            "Train/Val/Test Examples": "2259/565",
+            "language": "hineng"
+        }            
+    ]
+}
