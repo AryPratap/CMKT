@@ -47,6 +47,10 @@ class CodeMixedMetrics:
     """
 	def __init__(self, language):
 		self.language = language
+		self.mytoolkit = TaskToolKit('hineng')
+		self.lid = self.mytoolkit.lid(model_name="xlm-roberta-base")
+		self.ner = self.mytoolkit.ner(model_name="xlm-roberta-base")
+
 
 	def AvailableMetrics(self):
 		return ["cmi", "M-index", "I-index", "burstiness"]
@@ -72,13 +76,9 @@ class CodeMixedMetrics:
 			raise KeyError(f'{name} metrics not found.')
 		
 		if langTags is None:
-		
-			mytoolkit = TaskToolKit(self.language)
-			lid = mytoolkit.lid(model_name="xlm-roberta-base")
 
-			langTags = lid.getlangIds(sentence)
-			ner = mytoolkit.ner(model_name="xlm-roberta-base")
-			nertags = ner.get_predictions(sentence)	
+			langTags = self.lid.getlangIds(sentence)
+			nertags = self.ner.get_predictions(sentence)	
 			for i in range(len(langTags)):
 					if nertags[i][1] != 'O':
 						langTags[i] = '8'

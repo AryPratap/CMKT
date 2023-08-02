@@ -54,6 +54,7 @@ setup(
     "transformers==4.29.1",
     "nltk",
     "rouge_score",
-    "datasets==2.14.0"
+    "datasets==2.14.0",
+    "bert_score"
   ]
 )
