@@ -2,6 +2,12 @@ from cmkt.preprocessing import *
 print("\nCMKT Preprocessing Subpackage Demo (Porter Stemmer): ")
 print()
 
+'''
+Language convention:
+'en' -> English
+'hi' -> Hindi
+'hineng' -> Hinglish
+'''
 english_text = "International conference myself happy agreed trying tractable bowled"
 english_text_2 = "I am happy to have agreed to attend the international conference in computer science."
 

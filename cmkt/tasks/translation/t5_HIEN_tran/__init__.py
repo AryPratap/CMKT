@@ -35,11 +35,7 @@ class t5_HIEN_tran():
     
 
 
-#model = XLM_Roberta_HIEN()
 
-#tags = model.getlangIds("Aap kaise hai main thik. I am good.")
-
-#print(tags)
 
 
 

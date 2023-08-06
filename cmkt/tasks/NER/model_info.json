@@ -4,7 +4,7 @@
             "Model name": "xlm-roberta-base",
             "task": "NER",
             "Invoke By": "XLM_HIEN_NER",
-            "dataset": "Lince hindi-english NER dataset in roman script",
+            "dataset": "Language Identification and Named Entity Recognition in Hinglish Code Mixed Tweets (Singh et al., ACL 2018)",
             "Test Accuracy": "96.58%",
             "Train/Val/Test Examples": "1088/311/156",
             "language": "hineng"

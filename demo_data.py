@@ -26,7 +26,7 @@ print()
 
 # List CMKT datasets for hineng language
 print("List CMKT Datasets Function (search_key = language, search_term = hineng): ")
-data = ListDatasets(search_key="language", search_term = "eng", isPrint=True)
+data = ListDatasets(search_key="language", search_term = "hineng", isPrint=True)
 print()
 
 # Download cmkt datasets

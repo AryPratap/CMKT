@@ -21,12 +21,12 @@ print()
 
 # List CMKT datasets for the task of LID
 print("List CMKT Datasets Function (search_key = task, search_term = ner): ")
-data = ListDatasets(search_key="task", search_term = "ner", isPrint=True,details=True)
+data = ListDatasets(search_key="task", search_term = "ner", isPrint=True)
 print()
 
 # List CMKT datasets for hineng language
 print("List CMKT Datasets Function (search_key = language, search_term = hineng): ")
-data = ListDatasets(search_key="language", search_term = "eng", isPrint=True)
+data = ListDatasets(search_key="language", search_term = "hineng", isPrint=True)
 print()
 
 # Download cmkt datasets
