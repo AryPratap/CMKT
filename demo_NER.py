@@ -14,3 +14,5 @@ sentence = 'India mai gully cricket chal raha hain yaha, right Soniya Gandhi?'
 lst = ner.get_predictions(sentence)
 print(lst)
 
+sentence = "Rahul apni nayi car se aaj ek long drive par gya."
+print(ner.get_predictions(sentence))

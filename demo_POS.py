@@ -18,3 +18,6 @@ sentence = 'tum kese ho. mei thik hu. Are you all right?'
 
 lst = pos.get_predictions(sentence)
 print(lst)
+
+sentence = "Rahul apni nayi car se aaj ek long drive par gya."
+print(pos.get_predictions(sentence))

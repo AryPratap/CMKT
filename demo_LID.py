@@ -19,3 +19,6 @@ sentence = "Hey, how are you bhai? It has been kaafi lamba time since we last me
 lst = lid.get_predictions(sentence)
 print(lst)
 print()
+
+sentence = "Rahul apni nayi car se aaj ek long drive par gya."
+print(lid.get_predictions(sentence))

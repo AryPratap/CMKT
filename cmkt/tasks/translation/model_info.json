@@ -1,0 +1,13 @@
+{
+    "model":[
+        {
+            "Model name": "t5-small",
+            "task": "machine translation",
+            "Invoke By": "t5_HIEN_tran",
+            "dataset": "LinCE machine translation dataset for Hinglish text",
+            "BLUE score": "10.51",
+            "Train/Val/Test Examples": "8060/942",
+            "language": "hineng"
+        }            
+    ]
+}

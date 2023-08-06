@@ -8,7 +8,7 @@ hien_toolkit = TaskToolKit("hineng")
 
 # Search tasks available based on task type
 # Available Task types, "syntactic", "semantic", "generational" 
-task_list_hi = hien_toolkit.list_tasks(task_type="syntactic")
+task_list_hi = hien_toolkit.list_tasks(task_type="generational")
 print("Tasks for hinglish toolkit language") 
 print(task_list_hi)
 print()
@@ -24,7 +24,7 @@ print("models for lid task")
 print(model_lid)
 print()
 
-model_pos = hien_toolkit.task_model_info(task="pos", details=True)
+model_pos = hien_toolkit.task_model_info(task="machine translation", details=True)
 print("models for pos task")
 print(model_pos)
 print()

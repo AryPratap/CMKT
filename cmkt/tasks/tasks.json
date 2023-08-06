@@ -35,6 +35,12 @@
             "task": "humor detection",
             "model_info": "humor/model_info.json",  
             "language": ["hineng"]          
+        },
+        {
+            "task_type": "generational",
+            "task": "machine translation",
+            "model_info": "translation/model_info.json",  
+            "language": ["hineng"]          
         }
         
     ]
