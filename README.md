@@ -5,7 +5,8 @@
 -----------------------------------------
 [![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)![Compatibility](https://img.shields.io/badge/compatible%20with-python3.9.x-blue.svg)
 ## CMKT: Code-Mixed toolKiT
-CMKT is a wrapper library that makes code-mixed text processing more efficient than ever. 
+CMKT is a wrapper library that makes code-mixed text processing more efficient than ever. <br>
+The updated version of this library can be found [here](https://github.com/lingo-iitgn/CMKT).
  
 ## Installation
 ```
