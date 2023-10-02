@@ -9,11 +9,15 @@ CMKT is a wrapper library that makes code-mixed text processing more efficient t
  
 ## Installation
 ```
-pip install cmkt
+git clone https://github.com/lingo-iitgn/CMKT.git
+cd CMKT
+pip install -r "requirements.txt"
 ```
 ## Getting Started
+[Documentation](https://cmkt.readthedocs.io/en/latest/). This page will be updated with more details soon.
+
 How to use this library: <br>
-The toolkit usage and documentation can be accessed [here](https://colab.research.google.com/drive/11O3ApBUHgWhBe-Pv20KZaw-3o-1lm30h#scrollTo=j-MmU6Et9kZo)
+Refer the demo files for toolkit usage or the detailed [Google Colab Notebook](https://colab.research.google.com/drive/11O3ApBUHgWhBe-Pv20KZaw-3o-1lm30h#scrollTo=j-MmU6Et9kZo)
 ## Modules:
 There are four different modules available:-
 <br>
